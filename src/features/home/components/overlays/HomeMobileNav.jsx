@@ -1,0 +1,79 @@
+export default function HomeMobileNav() {
+  return (
+    <>
+      <div className="mobile-nav__wrapper">
+        <div className="mobile-nav__overlay mobile-nav__toggler">
+        </div>
+        {/* /.mobile-nav__overlay */}
+        <div className="mobile-nav__content">
+          <span className="mobile-nav__close mobile-nav__toggler">
+            <i className="fa fa-times">
+            </i>
+          </span>
+          <div className="logo-box">
+            <a aria-label="logo image" href="/home">
+              <img alt="Freshflow logo" src="/legacy/assets/images/assets/images/resources/logo-2.png" width={150} />
+            </a>
+          </div>
+          <div className="mobile-nav__container">
+            <ul className="main-menu__list one-page-scroll-menu list-unstyled">
+              <li className="scrollToLink">
+                <a href="#home">Home</a>
+              </li>
+              <li className="scrollToLink">
+                <a href="#about">About</a>
+              </li>
+              <li className="scrollToLink">
+                <a href="#services">Services</a>
+              </li>
+              <li className="scrollToLink">
+                <a href="#project">Project</a>
+              </li>
+              <li className="scrollToLink">
+                <a href="#team">Team</a>
+              </li>
+              <li className="scrollToLink">
+                <a href="#contact">Contact</a>
+              </li>
+              <li className="scrollToLink">
+                <a href="#blog">Blog</a>
+              </li>
+            </ul>
+          </div>
+          <ul className="mobile-nav__contact list-unstyled">
+            <li>
+              <i className="fa fa-envelope">
+              </i>
+              <a href="mailto:needhelp@packageName__.com">
+                needhelp@Freshflow.com
+              </a>
+            </li>
+            <li>
+              <i className="fas fa-phone">
+              </i>
+              <a href="tel:666-888-0000">
+                666 888 0000
+              </a>
+            </li>
+          </ul>
+          <div className="mobile-nav__top">
+            <div className="mobile-nav__social">
+              <a aria-label="X" className="fab fa-twitter" href="https://x.com" rel="noreferrer" target="_blank">
+              </a>
+              <a aria-label="Facebook" className="fab fa-facebook-square" href="https://facebook.com" rel="noreferrer" target="_blank">
+              </a>
+              <a aria-label="Pinterest" className="fab fa-pinterest-p" href="https://pinterest.com" rel="noreferrer" target="_blank">
+              </a>
+              <a aria-label="Instagram" className="fab fa-instagram" href="https://instagram.com" rel="noreferrer" target="_blank">
+              </a>
+            </div>
+            {/* /.mobile-nav__social */}
+          </div>
+          {/* /.mobile-nav__top */}
+        </div>
+        {/* /.mobile-nav__content */}
+      </div>
+      {/* /.mobile-nav__wrapper */}
+    </>
+  )
+}
