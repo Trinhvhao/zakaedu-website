@@ -1,11 +1,11 @@
 import { useState } from 'react'
 
 const SUBJECT_OPTIONS = [
-  'Type Of Service 01',
-  'Type Of Service 02',
-  'Type Of Service 03',
-  'Type Of Service 04',
-  'Type Of Service 05',
+  'Kiểm tra đầu vào miễn phí',
+  'Đăng ký học thử',
+  'Tư vấn khóa học',
+  'Học phí và lịch học',
+  'Hợp tác và kết nối',
 ]
 
 export default function ContactSection() {
@@ -29,18 +29,18 @@ export default function ContactSection() {
   const validate = () => {
     const nextErrors = {}
 
-    if (!formData.name.trim()) nextErrors.name = 'Please enter your name.'
+    if (!formData.name.trim()) nextErrors.name = 'Vui lòng nhập họ tên.'
     if (!formData.email.trim()) {
-      nextErrors.email = 'Please enter your email.'
+      nextErrors.email = 'Vui lòng nhập email.'
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      nextErrors.email = 'Email format is invalid.'
+      nextErrors.email = 'Định dạng email không hợp lệ.'
     }
-    if (!formData.phone.trim()) nextErrors.phone = 'Please enter your phone number.'
-    if (!formData.subject) nextErrors.subject = 'Please choose a service.'
+    if (!formData.phone.trim()) nextErrors.phone = 'Vui lòng nhập số điện thoại.'
+    if (!formData.subject) nextErrors.subject = 'Vui lòng chọn chương trình.'
     if (!formData.message.trim()) {
-      nextErrors.message = 'Please enter your message.'
+      nextErrors.message = 'Vui lòng nhập nội dung.'
     } else if (formData.message.trim().length < 10) {
-      nextErrors.message = 'Message should be at least 10 characters.'
+      nextErrors.message = 'Nội dung cần từ 10 ký tự trở lên.'
     }
 
     return nextErrors
@@ -52,14 +52,14 @@ export default function ContactSection() {
     setErrors(nextErrors)
 
     if (Object.keys(nextErrors).length > 0) {
-      setResult('Please correct highlighted fields and submit again.')
+      setResult('Vui lòng kiểm tra các trường đang báo lỗi.')
       return
     }
 
     setSubmitting(true)
     window.setTimeout(() => {
       setSubmitting(false)
-      setResult('Message sent successfully. Our team will contact you shortly.')
+      setResult('Gửi thành công. Trung tâm sẽ liên hệ với bạn sớm.')
       setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
     }, 650)
   }
@@ -71,21 +71,21 @@ export default function ContactSection() {
           className="contact-one__bg"
           style={{
             backgroundImage:
-              'url("/legacy/assets/images/assets/images/shapes/contact-one-shape-bg.png")',
+              'url("/legacy/assets/images/shapes/contact-one-shape-bg.png")',
           }}
         />
         <div
           className="contact-one__shape-1"
           style={{
             backgroundImage:
-              'url("/legacy/assets/images/assets/images/shapes/contact-one-shape-1.png")',
+              'url("/legacy/assets/images/shapes/contact-one-shape-1.png")',
           }}
         />
         <div className="contact-one__shape-2 zoom-fade">
-          <img alt="" src="/legacy/assets/images/assets/images/shapes/contact-one-shape-2.png" />
+          <img alt="" src="/legacy/assets/images/shapes/contact-one-shape-2.png" />
         </div>
         <div className="contact-one__shape-3 zoom-fade">
-          <img alt="" src="/legacy/assets/images/assets/images/shapes/contact-one-shape-3.png" />
+          <img alt="" src="/legacy/assets/images/shapes/contact-one-shape-3.png" />
         </div>
         <div className="container">
           <div className="row">
@@ -100,7 +100,7 @@ export default function ContactSection() {
                   <div className="contact-one__img-main">
                     <img
                       alt=""
-                      src="/legacy/assets/images/assets/images/resources/contact-one-img-main.jpg"
+                      src="/legacy/assets/images/resources/contact-one-img-main.jpg"
                     />
                   </div>
                   <div
@@ -111,7 +111,7 @@ export default function ContactSection() {
                   >
                     <img
                       alt=""
-                      src="/legacy/assets/images/assets/images/resources/contact-one-small-img-1.jpg"
+                      src="/legacy/assets/images/resources/contact-one-small-img-1.jpg"
                     />
                   </div>
                   <div
@@ -122,7 +122,7 @@ export default function ContactSection() {
                   >
                     <img
                       alt=""
-                      src="/legacy/assets/images/assets/images/resources/contact-one-small-img-2.jpg"
+                      src="/legacy/assets/images/resources/contact-one-small-img-2.jpg"
                     />
                   </div>
                 </div>
@@ -136,11 +136,11 @@ export default function ContactSection() {
                       <div className="section-title__tagline-shape" />
                       <div className="section-title__tagline-shape-2" />
                     </div>
-                    <span className="section-title__tagline">CALL TO ACTION</span>
+                    <span className="section-title__tagline">Kết nối ngay</span>
                   </div>
                   <h2 className="section-title__title title-animation">
-                    lets you connect with experts,
-                    get advice, advice, and explore solutions
+                    Nhận tư vấn lộ trình học tiếng Anh
+                    cá nhân hóa phù hợp cho bé
                   </h2>
                 </div>
                 <div className="contact-one__inner">
@@ -150,7 +150,7 @@ export default function ContactSection() {
                         <div className="contact-one__input-box">
                           <input
                             name="name"
-                            placeholder="Name*"
+                            placeholder="Họ tên*"
                             required
                             type="text"
                             value={formData.name}
@@ -176,7 +176,7 @@ export default function ContactSection() {
                         <div className="contact-one__input-box">
                           <input
                             name="phone"
-                            placeholder="Phone*"
+                            placeholder="Số điện thoại*"
                             required
                             type="text"
                             value={formData.phone}
@@ -193,7 +193,7 @@ export default function ContactSection() {
                               value={formData.subject}
                               onChange={updateField('subject')}
                             >
-                              <option value="">Subjects*</option>
+                              <option value="">Chủ đề*</option>
                               {SUBJECT_OPTIONS.map((option) => (
                                 <option key={option} value={option}>
                                   {option}
@@ -208,7 +208,7 @@ export default function ContactSection() {
                         <div className="contact-one__input-box text-message-box">
                           <textarea
                             name="message"
-                            placeholder="Write a your Message"
+                            placeholder="Hãy cho chúng tôi biết độ tuổi và mục tiêu của bé"
                             value={formData.message}
                             onChange={updateField('message')}
                           />
@@ -216,7 +216,7 @@ export default function ContactSection() {
                         </div>
                         <div className="contact-one__btn-box">
                           <button className="thm-btn" type="submit" disabled={submitting}>
-                            {submitting ? 'Sending...' : 'Send Message'}
+                            {submitting ? 'Đang gửi...' : 'Gửi thông tin'}
                             <span>
                               <i className="icon-diagonal-arrow" />
                             </span>
@@ -234,9 +234,9 @@ export default function ContactSection() {
                         <span className="icon-envelope" />
                       </div>
                       <div className="contact-one__call-contact">
-                        <p>Send Email</p>
+                        <p>Email liên hệ</p>
                         <h4>
-                          <a href="mailto:support@mail.com">support@mail.com</a>
+                          <a href="mailto:zakaedu.contact@gmail.com">zakaedu.contact@gmail.com</a>
                         </h4>
                       </div>
                     </li>
@@ -245,9 +245,9 @@ export default function ContactSection() {
                         <span className="icon-phone-call" />
                       </div>
                       <div className="contact-one__call-contact">
-                        <p>Call Us Any TIme</p>
+                        <p>Hotline tư vấn</p>
                         <h4>
-                          <a href="tel:+12004578960">+12 (00) 457 8960</a>
+                          <a href="tel:0354901750">0354 901 750</a>
                         </h4>
                       </div>
                     </li>

@@ -10,8 +10,10 @@ function getDelay(delay) {
   return /^\d+$/.test(delay) ? `${delay}ms` : delay
 }
 
-export function useHomeRevealAnimations() {
+export function useHomeRevealAnimations(enabled = true) {
   useEffect(() => {
+    if (!enabled) return undefined
+
     const nodes = Array.from(document.querySelectorAll('.legacy-home-page [data-reveal]'))
     if (!nodes.length) return
 
@@ -71,5 +73,5 @@ export function useHomeRevealAnimations() {
         node.style.removeProperty('--reveal-duration')
       })
     }
-  }, [])
+  }, [enabled])
 }

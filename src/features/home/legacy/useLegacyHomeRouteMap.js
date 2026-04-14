@@ -1,8 +1,10 @@
 import { useEffect } from 'react'
 import { LEGACY_ROUTE_MAP } from './legacyHomeConfig'
 
-export function useLegacyHomeRouteMap() {
+export function useLegacyHomeRouteMap(enabled = true) {
   useEffect(() => {
+    if (!enabled) return
+
     const legacyAnchors = document.querySelectorAll(
       '.legacy-home-page a[href^="/legacy/pages/"]',
     )
@@ -14,5 +16,5 @@ export function useLegacyHomeRouteMap() {
         anchor.setAttribute('href', mappedRoute)
       }
     })
-  }, [])
+  }, [enabled])
 }

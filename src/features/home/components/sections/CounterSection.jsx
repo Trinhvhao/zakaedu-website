@@ -4,13 +4,13 @@ export default function CounterSection() {
   return (
     <>
     <section className="counter-one">
-      <div className="counter-one__bg-shape" style={{backgroundImage: 'url("/legacy/assets/images/assets/images/shapes/counter-one-bg-shape.png")'}}>
+      <div className="counter-one__bg-shape" style={{backgroundImage: 'url("/legacy/assets/images/shapes/counter-one-bg-shape.png")'}}>
       </div>
       <div className="counter-one__shape-1 float-bob-y">
-        <img alt="" src="/legacy/assets/images/assets/images/shapes/counter-one-shape-1.png" />
+        <img alt="" src="/legacy/assets/images/shapes/counter-one-shape-1.png" />
       </div>
       <div className="counter-one__shape-2 float-bob-x">
-        <img alt="" src="/legacy/assets/images/assets/images/shapes/counter-one-shape-2.png" />
+        <img alt="" src="/legacy/assets/images/shapes/counter-one-shape-2.png" />
       </div>
       <div className="container">
         <ul className="row list-unstyled">
@@ -30,7 +30,7 @@ export default function CounterSection() {
                   </span>
                 </div>
                 <p className="counter-one__count-text">
-                  Projects Done per month
+                  Học viên đang học mỗi tháng
                 </p>
               </div>
             </div>
@@ -51,7 +51,7 @@ export default function CounterSection() {
                   </span>
                 </div>
                 <p className="counter-one__count-text">
-                  Trusted by happy Customer!
+                  Tỷ lệ hài lòng của phụ huynh
                 </p>
               </div>
             </div>
@@ -75,7 +75,7 @@ export default function CounterSection() {
                   </span>
                 </div>
                 <p className="counter-one__count-text">
-                  Positive Rating in Trustpilot
+                  Mốc tiến bộ đã hoàn thành
                 </p>
               </div>
             </div>
@@ -96,7 +96,7 @@ export default function CounterSection() {
                   </span>
                 </div>
                 <p className="counter-one__count-text">
-                  Rating in oy local City Network
+                  Trường học và cộng đồng đồng hành
                 </p>
               </div>
             </div>

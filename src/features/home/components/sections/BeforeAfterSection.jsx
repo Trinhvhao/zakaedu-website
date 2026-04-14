@@ -1,19 +1,19 @@
 import ImageCompareSlider from '../shared/ImageCompareSlider'
 
-export default function BeforeAfterSection() {
+export default function TrướcAfterSection() {
   return (
     <>
     <section className="before-and-after">
-      <div className="before-and-after__bg-shape" style={{backgroundImage: 'url("/legacy/assets/images/assets/images/shapes/before-and-after-bg-shape.png")'}}>
+      <div className="before-and-after__bg-shape" style={{backgroundImage: 'url("/legacy/assets/images/shapes/before-and-after-bg-shape.png")'}}>
       </div>
       <div className="before-and-after__shape-1 float-bob-y">
-        <img alt="" src="/legacy/assets/images/assets/images/shapes/before-and-after-shape-1.png" />
+        <img alt="" src="/legacy/assets/images/shapes/before-and-after-shape-1.png" />
       </div>
       <div className="before-and-after__shape-2 float-bob-x">
-        <img alt="" src="/legacy/assets/images/assets/images/shapes/before-and-after-shape-2.png" />
+        <img alt="" src="/legacy/assets/images/shapes/before-and-after-shape-2.png" />
       </div>
       <div className="before-and-after__shape-3 float-bob-y">
-        <img alt="" src="/legacy/assets/images/assets/images/shapes/before-and-after-shape-3.png" />
+        <img alt="" src="/legacy/assets/images/shapes/before-and-after-shape-3.png" />
       </div>
       <div className="container">
         <div className="row">
@@ -22,19 +22,19 @@ export default function BeforeAfterSection() {
               <div className="before-and-after__img-box">
                 <div className="before-after">
                     <ImageCompareSlider
-                      beforeSrc="/legacy/assets/images/assets/images/resources/before-and-after-img.jpg"
-                      afterSrc="/legacy/assets/images/assets/images/resources/before-and-after-img-2.jpg"
-                      alt="Before and after cleaning result"
+                      beforeSrc="/legacy/assets/images/resources/before-and-after-img.jpg"
+                      afterSrc="/legacy/assets/images/resources/before-and-after-img-2.jpg"
+                      alt="Trước and after student learning progress"
                     />
                 </div>
                 <div className="before-and-after__tag">
                   <span>
-                    Before
+                    Trước
                   </span>
                 </div>
                 <div className="before-and-after__tag before-and-after__tag-2">
                   <span>
-                    AFTER
+                    SAU
                   </span>
                 </div>
               </div>
@@ -51,19 +51,20 @@ export default function BeforeAfterSection() {
                     </div>
                   </div>
                   <span className="section-title__tagline">
-                    Before After
+                    Trước & Sau
                   </span>
                 </div>
                 <h2 className="section-title__title title-animation">
-                  Recent
+                  Hành trình
+                  {' '}
                   <span>
-                    Completed Projects
+                    tiến bộ của học viên
                   </span>
                 </h2>
               </div>
               <p className="before-and-after__text">
-                Discover the details of our most recent completed
-                projects, showcasing our expertise and commitment to excellence.
+                Theo dõi sự thay đổi của bé từ nền tảng cơ bản
+                đến giao tiếp tự tin qua lộ trình hướng dẫn rõ ràng.
               </p>
               <ul className="before-and-after__points list-unstyled">
                 <li>
@@ -72,7 +73,7 @@ export default function BeforeAfterSection() {
                     </span>
                   </div>
                   <p>
-                    Innovative Solutions for Every Need
+                    Đánh giá đầu vào trước khi nhập học
                   </p>
                 </li>
                 <li>
@@ -81,7 +82,7 @@ export default function BeforeAfterSection() {
                     </span>
                   </div>
                   <p>
-                    Expert Team Delivering Quality Results
+                    Kiểm tra phát âm và giao tiếp hàng tuần
                   </p>
                 </li>
                 <li>
@@ -90,24 +91,24 @@ export default function BeforeAfterSection() {
                     </span>
                   </div>
                   <p>
-                    Reliable Services You Can Trust
+                    Kết quả học tập đo được gửi đến phụ huynh
                   </p>
                 </li>
               </ul>
               <ul className="before-and-after__img-list list-unstyled">
                 <li>
                   <div className="before-and-after__img-list-img">
-                    <img alt="" src="/legacy/assets/images/assets/images/resources/before-and-after-img-list-img-1.jpg" />
+                    <img alt="" src="/legacy/assets/images/resources/before-and-after-img-list-img-1.jpg" />
                   </div>
                 </li>
                 <li>
                   <div className="before-and-after__img-list-img">
-                    <img alt="" src="/legacy/assets/images/assets/images/resources/before-and-after-img-list-img-2.jpg" />
+                    <img alt="" src="/legacy/assets/images/resources/before-and-after-img-list-img-2.jpg" />
                   </div>
                 </li>
                 <li>
                   <div className="before-and-after__img-list-img">
-                    <img alt="" src="/legacy/assets/images/assets/images/resources/before-and-after-img-list-img-3.jpg" />
+                    <img alt="" src="/legacy/assets/images/resources/before-and-after-img-list-img-3.jpg" />
                   </div>
                 </li>
               </ul>
@@ -116,7 +117,7 @@ export default function BeforeAfterSection() {
         </div>
       </div>
     </section>
-    {/*Before And After End*/}
+    {/*Trước And After End*/}
     {/*Why Choose One Start*/}
     </>
   )

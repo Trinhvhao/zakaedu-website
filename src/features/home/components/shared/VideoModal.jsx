@@ -76,7 +76,7 @@ export default function VideoModal({ videoUrl, onClose }) {
             allow="autoplay; encrypted-media; picture-in-picture"
             allowFullScreen
             src={embedUrl}
-            title="Freshflow overview video"
+            title="ZakaEdu overview video"
           />
         </div>
       </div>

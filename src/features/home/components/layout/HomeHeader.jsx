@@ -13,8 +13,8 @@ export default function HomeHeader() {
                 </div>
                 <div className="text">
                   <p>
-                    <a href="mailto:support@example.com">
-                      support@example.com
+                    <a href="mailto:zakaedu.contact@gmail.com">
+                      zakaedu.contact@gmail.com
                     </a>
                   </p>
                 </div>
@@ -26,8 +26,8 @@ export default function HomeHeader() {
                 </div>
                 <div className="text">
                   <p>
-                    <a href="tel:1212345678900">
-                      +12 (123) 456 78900
+                    <a href="tel:0354901750">
+                      0354 901 750
                     </a>
                   </p>
                 </div>
@@ -39,7 +39,7 @@ export default function HomeHeader() {
                 </div>
                 <div className="text">
                   <p>
-                    684 West College St. Sun City, USA
+                    Toà V4, The Vesta
                   </p>
                 </div>
               </li>
@@ -77,7 +77,7 @@ export default function HomeHeader() {
               <div className="main-menu__left">
                 <div className="main-menu__logo">
                   <a href="/home">
-                    <img alt="" src="/legacy/assets/images/assets/images/resources/logo-1.png" />
+                    <img alt="" src="/legacy/assets/images/resources/logo-1.svg" />
                   </a>
                 </div>
               </div>
@@ -88,9 +88,7 @@ export default function HomeHeader() {
                 </button>
                 <ul className="main-menu__list one-page-scroll-menu">
                   <li className="dropdown megamenu scrollToLink">
-                    <a href="#home">
-                      Home
-                    </a>
+                    <a href="#home">Trang chủ</a>
                     <ul>
                       <li>
                         <section className="home-showcase">
@@ -100,7 +98,7 @@ export default function HomeHeader() {
                                 <div className="col-lg-3">
                                   <div className="home-showcase__item">
                                     <div className="home-showcase__image">
-                                      <img alt="" src="/legacy/assets/images/assets/images/home-showcase/home-showcase-1-1.jpg" />
+                                      <img alt="" src="/legacy/assets/images/home-showcase/home-showcase-1-1.jpg" />
                                       <div className="home-showcase__buttons">
                                         <a className="thm-btn home-showcase__buttons__item" href="/home">
                                           Multi Page
@@ -129,7 +127,7 @@ export default function HomeHeader() {
                                 <div className="col-lg-3">
                                   <div className="home-showcase__item">
                                     <div className="home-showcase__image">
-                                      <img alt="" src="/legacy/assets/images/assets/images/home-showcase/home-showcase-1-2.jpg" />
+                                      <img alt="" src="/legacy/assets/images/home-showcase/home-showcase-1-2.jpg" />
                                       <div className="home-showcase__buttons">
                                         <a className="thm-btn home-showcase__buttons__item" href="/home">
                                           Multi Page
@@ -158,7 +156,7 @@ export default function HomeHeader() {
                                 <div className="col-lg-3">
                                   <div className="home-showcase__item">
                                     <div className="home-showcase__image">
-                                      <img alt="" src="/legacy/assets/images/assets/images/home-showcase/home-showcase-1-3.jpg" />
+                                      <img alt="" src="/legacy/assets/images/home-showcase/home-showcase-1-3.jpg" />
                                       <div className="home-showcase__buttons">
                                         <a className="thm-btn home-showcase__buttons__item" href="/home">
                                           Multi Page
@@ -187,7 +185,7 @@ export default function HomeHeader() {
                                 <div className="col-lg-3">
                                   <div className="home-showcase__item">
                                     <div className="home-showcase__image">
-                                      <img alt="" src="/legacy/assets/images/assets/images/home-showcase/home-showcase-1-4.jpg" />
+                                      <img alt="" src="/legacy/assets/images/home-showcase/home-showcase-1-4.jpg" />
                                       <div className="home-showcase__buttons">
                                         <a className="thm-btn home-showcase__buttons__item" href="/home">
                                           View
@@ -217,14 +215,10 @@ export default function HomeHeader() {
                     </ul>
                   </li>
                   <li className="scrollToLink">
-                    <a href="#about">
-                      About
-                    </a>
+                    <a href="#about">Về chúng tôi</a>
                   </li>
                   <li className="scrollToLink">
-                    <a href="#services">
-                      Services
-                    </a>
+                    <a href="#services">Chương trình</a>
                   </li>
                   <li className="scrollToLink">
                     <a href="#project">
@@ -232,19 +226,13 @@ export default function HomeHeader() {
                     </a>
                   </li>
                   <li className="scrollToLink">
-                    <a href="#team">
-                      Team
-                    </a>
+                    <a href="#team">Đội ngũ</a>
                   </li>
                   <li className="scrollToLink">
-                    <a href="#contact">
-                      Contact
-                    </a>
+                    <a href="#contact">Liên hệ</a>
                   </li>
                   <li className="scrollToLink">
-                    <a href="#blog">
-                      Blog
-                    </a>
+                    <a href="#blog">Tin tức</a>
                   </li>
                 </ul>
               </div>
@@ -270,8 +258,8 @@ export default function HomeHeader() {
                     <a href="/contact">
                       <span className="icon-customer-support">
                       </span>
-                      Book
-                      Schedule
+                        Enroll
+                        Today
                     </a>
                   </div>
                 </div>
@@ -289,32 +277,32 @@ export default function HomeHeader() {
               <div className="main-menu__left">
                 <div className="main-menu__logo">
                   <a href="/home">
-                    <img alt="Freshflow logo" src="/legacy/assets/images/assets/images/resources/logo-1.png" />
+                    <img alt="ZakaEdu logo" src="/legacy/assets/images/resources/logo-1.svg" />
                   </a>
                 </div>
               </div>
               <div className="main-menu__main-menu-box">
                 <ul className="main-menu__list one-page-scroll-menu">
                   <li className="scrollToLink current">
-                    <a href="#home">Home</a>
+                    <a href="#home">Trang chủ</a>
                   </li>
                   <li className="scrollToLink">
-                    <a href="#about">About</a>
+                    <a href="#about">Về chúng tôi</a>
                   </li>
                   <li className="scrollToLink">
-                    <a href="#services">Services</a>
+                    <a href="#services">Chương trình</a>
                   </li>
                   <li className="scrollToLink">
                     <a href="#project">Project</a>
                   </li>
                   <li className="scrollToLink">
-                    <a href="#team">Team</a>
+                    <a href="#team">Đội ngũ</a>
                   </li>
                   <li className="scrollToLink">
-                    <a href="#contact">Contact</a>
+                    <a href="#contact">Liên hệ</a>
                   </li>
                   <li className="scrollToLink">
-                    <a href="#blog">Blog</a>
+                    <a href="#blog">Tin tức</a>
                   </li>
                 </ul>
               </div>

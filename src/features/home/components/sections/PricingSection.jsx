@@ -1,1012 +1,272 @@
+import { useMemo, useState } from 'react'
+
+const PRICING_PLANS = {
+  weekly: [
+    {
+      name: 'Khởi đầu',
+      price: 320,
+      duration: '/tuần',
+      summary: 'Dành cho học viên nhỏ đang xây nền tảng ban đầu.',
+      features: [
+        '2 buổi học tương tác mỗi tuần',
+        'Tập trung phát âm và từ vựng',
+        'Giáo viên phản hồi hằng tuần',
+        'Phiếu luyện tập tại nhà',
+      ],
+      image: '/legacy/assets/images/resources/pricing-one-1-1.jpg',
+    },
+    {
+      name: 'Tiến bộ',
+      price: 440,
+      duration: '/tuần',
+      summary: 'Phát triển cân bằng giao tiếp, đọc hiểu và ngữ pháp.',
+      features: [
+        '3 buổi học mỗi tuần',
+        'Hoạt động CLB giao tiếp',
+        'Cột mốc đánh giá tiến bộ',
+        'Cập nhật kết quả cho phụ huynh',
+      ],
+      image: '/legacy/assets/images/resources/pricing-one-1-2.jpg',
+      recommended: true,
+    },
+    {
+      name: 'Bứt phá',
+      price: 580,
+      duration: '/tuần',
+      summary: 'Tăng cường chuyên sâu để giao tiếp tự tin hơn.',
+      features: [
+        '4 buổi học mỗi tuần',
+        'Luyện thi Cambridge',
+        'Buổi hướng dẫn 1 kèm 1',
+        'Báo cáo chi tiết theo tháng',
+      ],
+      image: '/legacy/assets/images/resources/pricing-one-1-3.jpg',
+    },
+  ],
+  monthly: [
+    {
+      name: 'Khởi đầu',
+      price: 1180,
+      duration: '/tháng',
+      summary: 'Nền tảng tiếng Anh ổn định cho học viên mới.',
+      features: [
+        '8 buổi học mỗi tháng',
+        'Luyện phát âm và nghe hiểu',
+        'Học qua trò chơi trên lớp',
+        'Kết nối giáo viên và phụ huynh',
+      ],
+      image: '/legacy/assets/images/resources/pricing-one-1-1.jpg',
+    },
+    {
+      name: 'Tiến bộ',
+      price: 1590,
+      duration: '/tháng',
+      summary: 'Lựa chọn phổ biến để phát triển kỹ năng toàn diện.',
+      features: [
+        '12 buổi học mỗi tháng',
+        'Kết hợp giao tiếp và đọc hiểu',
+        'Nhiệm vụ học theo dự án',
+        'Đánh giá tiến bộ mỗi tháng',
+      ],
+      image: '/legacy/assets/images/resources/pricing-one-1-2.jpg',
+      recommended: true,
+    },
+    {
+      name: 'Bứt phá',
+      price: 1990,
+      duration: '/tháng',
+      summary: 'Lộ trình tăng tốc với mục tiêu kết quả rõ ràng.',
+      features: [
+        '16 buổi học mỗi tháng',
+        'Lộ trình luyện thi Cambridge',
+        'Cố vấn luyện nói chuyên sâu',
+        'Báo cáo phân tích kết quả học tập',
+      ],
+      image: '/legacy/assets/images/resources/pricing-one-1-3.jpg',
+    },
+  ],
+  yearly: [
+    {
+      name: 'Khởi đầu',
+      price: 12900,
+      duration: '/năm',
+      summary: 'Xây dựng sự tự tin bền vững theo chương trình dài hạn.',
+      features: [
+        '96 buổi học mỗi năm',
+        'Lộ trình học tập có cấu trúc',
+        'Sự kiện giao tiếp theo mùa',
+        'Tư vấn đồng hành cho phụ huynh',
+      ],
+      image: '/legacy/assets/images/resources/pricing-one-1-1.jpg',
+    },
+    {
+      name: 'Tiến bộ',
+      price: 16800,
+      duration: '/năm',
+      summary: 'Tối ưu chi phí cho tiến bộ ổn định và lâu dài.',
+      features: [
+        '144 buổi học mỗi năm',
+        'Cột mốc sẵn sàng thi Cambridge',
+        'Tham gia CLB giao tiếp',
+        'Hỗ trợ ưu tiên từ cố vấn',
+      ],
+      image: '/legacy/assets/images/resources/pricing-one-1-2.jpg',
+      recommended: true,
+    },
+    {
+      name: 'Bứt phá',
+      price: 21400,
+      duration: '/năm',
+      summary: 'Gói nâng cao dành cho học viên đạt mục tiêu cao.',
+      features: [
+        '192 buổi học mỗi năm',
+        'Cố vấn cá nhân hóa theo năng lực',
+        'Luyện thi nâng cao chuyên sâu',
+        'Hồ sơ tiến bộ đầy đủ cả năm',
+      ],
+      image: '/legacy/assets/images/resources/pricing-one-1-3.jpg',
+    },
+  ],
+}
+
+const PERIOD_LABELS = [
+  { key: 'weekly', label: 'Theo tuần' },
+  { key: 'monthly', label: 'Theo tháng' },
+  { key: 'yearly', label: 'Theo năm' },
+]
+
 export default function PricingSection() {
+  const [period, setPeriod] = useState('weekly')
+
+  const plans = useMemo(() => PRICING_PLANS[period], [period])
+
   return (
     <>
-    <section className="pricing-one">
-      <div className="pricing-one__shape-1">
-        <img alt="" src="/legacy/assets/images/assets/images/shapes/pricing-one-shape-1.png" />
-      </div>
-      <div className="pricing-one__shape-bg-1" style={{backgroundImage: 'url("/legacy/assets/images/assets/images/shapes/pricing-one-shape-bg-1.png")'}}>
-      </div>
-      <div className="pricing-one__shape-bg-2" style={{backgroundImage: 'url("/legacy/assets/images/assets/images/shapes/pricing-one-shape-bg-2.png")'}}>
-      </div>
-      <div className="container">
-        <div className="section-title text-center sec-title-animation animation-style1">
-          <div className="section-title__tagline-box">
-            <div className="section-title__tagline-shape-box">
-              <div className="section-title__tagline-shape">
-              </div>
-              <div className="section-title__tagline-shape-2">
-              </div>
-            </div>
-            <span className="section-title__tagline">
-              Plans &amp; Pricing
-            </span>
-          </div>
-          <h2 className="section-title__title title-animation">
-            Explore Our Affordable and
-            <br />
-            Flexible
-            <span>
-              Pricing Options
-            </span>
-          </h2>
+      <section className="pricing-one">
+        <div className="pricing-one__shape-1">
+          <img alt="" src="/legacy/assets/images/shapes/pricing-one-shape-1.png" />
         </div>
-        <div className="pricing-one__inner">
-          <div className="pricing-one__main-tab-box tabs-box">
-            <div className="pricing-one__tab-buttons-box">
-              <div className="pricing-one__discount-box">
-                <p>
-                  -10% Off
-                </p>
+        <div
+          className="pricing-one__shape-bg-1"
+          style={{
+            backgroundImage:
+              'url("/legacy/assets/images/shapes/pricing-one-shape-bg-1.png")',
+          }}
+        />
+        <div
+          className="pricing-one__shape-bg-2"
+          style={{
+            backgroundImage:
+              'url("/legacy/assets/images/shapes/pricing-one-shape-bg-2.png")',
+          }}
+        />
+        <div className="container">
+          <div className="section-title text-center sec-title-animation animation-style1">
+            <div className="section-title__tagline-box">
+              <div className="section-title__tagline-shape-box">
+                <div className="section-title__tagline-shape" />
+                <div className="section-title__tagline-shape-2" />
               </div>
-              <div className="pricing-one__discount-shape-1">
-                <img alt="" src="/legacy/assets/images/assets/images/shapes/pricing-one-discount--shape-1.png" />
-              </div>
-              <ul className="tab-buttons list-unstyled">
-                <li className="tab-btn active-btn" data-tab="#weekly">
-                  <span>
-                    Weekly
-                  </span>
-                </li>
-                <li className="tab-btn" data-tab="#monthly">
-                  <span>
-                    Monthly
-                  </span>
-                </li>
-                <li className="tab-btn" data-tab="#yearly">
-                  <span>
-                    Yearly
-                  </span>
-                </li>
-              </ul>
+              <span className="section-title__tagline">Học phí &amp; lộ trình</span>
             </div>
-            <div className="tabs-content">
-              <div className="tab active-tab" id="weekly">
-                {/* Single Item */}
-                <div className="pricing-one__tab-content-box">
-                  <div className="pricing-one__tab-content-shape-1">
-                    <img alt="" src="/legacy/assets/images/assets/images/shapes/pricing-one-tab-content-shape-1.png" />
-                  </div>
-                  <div className="pricing-one__tab-content-shape-2">
-                    <img alt="" src="/legacy/assets/images/assets/images/shapes/pricing-one-tab-content-shape-2.png" />
-                  </div>
-                  <div className="pricing-one__tab-content-left">
-                    <div className="pricing-one__img">
-                      <img alt="" src="/legacy/assets/images/assets/images/resources/pricing-one-1-1.jpg" />
-                    </div>
-                    <div className="pricing-one__price-box">
-                      <p className="pricing-one__price-pack">
-                        Standard
-                      </p>
-                      <h2 className="pricing-one__price">
-                        <span className="dolar">
-                          $
-                        </span>
-                        320
-                        <span className="clean-count">
-                          /02 Room
-                        </span>
-                      </h2>
-                      <p className="pricing-one__text">
-                        Pristine Office Spaces in
-                        <br />
-                        Under 4 Hours!
-                      </p>
-                    </div>
-                  </div>
-                  <div className="pricing-one__tab-content-right">
-                    <ul className="list-unstyled pricing-one__points">
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Eco-Friendly Cleaning Products
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Flexible Scheduling
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Highly Trained Professionals
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Customized Cleaning Plans
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Flexible Scheduling
-                          </p>
-                        </div>
-                      </li>
-                    </ul>
-                    <div className="pricing-one__btn-box">
-                      <a href="/legacy/pages/pricing/index.html">
-                        <span className="icon-plus-1">
-                        </span>
-                        Choose Plan
-                      </a>
-                    </div>
-                  </div>
+            <h2 className="section-title__title title-animation">
+              Gói học linh hoạt cho mọi
+              <br />
+              học viên{' '}
+              <span>trên hành trình phát triển</span>
+            </h2>
+          </div>
+
+          <div className="pricing-one__inner">
+            <div className="pricing-one__main-tab-box tabs-box">
+              <div className="pricing-one__tab-buttons-box">
+                <div className="pricing-one__discount-box">
+                  <p>-10% ưu đãi</p>
                 </div>
-                {/* Single Item */}
-                {/* Single Item */}
-                <div className="pricing-one__tab-content-box">
-                  <div className="pricing-one__badge">
-                    <p>
-                      Recommended
-                    </p>
-                  </div>
-                  <div className="pricing-one__tab-content-shape-1">
-                    <img alt="" src="/legacy/assets/images/assets/images/shapes/pricing-one-tab-content-shape-1.png" />
-                  </div>
-                  <div className="pricing-one__tab-content-shape-2">
-                    <img alt="" src="/legacy/assets/images/assets/images/shapes/pricing-one-tab-content-shape-2.png" />
-                  </div>
-                  <div className="pricing-one__tab-content-left">
-                    <div className="pricing-one__img">
-                      <img alt="" src="/legacy/assets/images/assets/images/resources/pricing-one-1-2.jpg" />
-                    </div>
-                    <div className="pricing-one__price-box">
-                      <p className="pricing-one__price-pack">
-                        Premium
-                      </p>
-                      <h2 className="pricing-one__price">
-                        <span className="dolar">
-                          $
-                        </span>
-                        440
-                        <span className="clean-count">
-                          /08 Room
-                        </span>
-                      </h2>
-                      <p className="pricing-one__text">
-                        Freshen Up Your Home in 2
-                        <br />
-                        Hours Flat!
-                      </p>
-                    </div>
-                  </div>
-                  <div className="pricing-one__tab-content-right">
-                    <ul className="list-unstyled pricing-one__points">
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Customizable Packages
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Dusting and vacuuming
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Mopping floors
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Cleaning kitchen surfaces
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Aappliances (exteriors)
-                          </p>
-                        </div>
-                      </li>
-                    </ul>
-                    <div className="pricing-one__btn-box">
-                      <a href="/legacy/pages/pricing/index.html">
-                        <span className="icon-plus-1">
-                        </span>
-                        Choose Plan
-                      </a>
-                    </div>
-                  </div>
+                <div className="pricing-one__discount-shape-1">
+                  <img
+                    alt=""
+                    src="/legacy/assets/images/shapes/pricing-one-discount--shape-1.png"
+                  />
                 </div>
-                {/* Single Item */}
-                {/* Single Item */}
-                <div className="pricing-one__tab-content-box">
-                  <div className="pricing-one__badge pricing-one__badge--two">
-                    <p>
-                      20% Discount
-                    </p>
-                  </div>
-                  <div className="pricing-one__tab-content-shape-1">
-                    <img alt="" src="/legacy/assets/images/assets/images/shapes/pricing-one-tab-content-shape-1.png" />
-                  </div>
-                  <div className="pricing-one__tab-content-shape-2">
-                    <img alt="" src="/legacy/assets/images/assets/images/shapes/pricing-one-tab-content-shape-2.png" />
-                  </div>
-                  <div className="pricing-one__tab-content-left">
-                    <div className="pricing-one__img">
-                      <img alt="" src="/legacy/assets/images/assets/images/resources/pricing-one-1-3.jpg" />
-                    </div>
-                    <div className="pricing-one__price-box">
-                      <p className="pricing-one__price-pack">
-                        Business
-                      </p>
-                      <h2 className="pricing-one__price">
-                        <span className="dolar">
-                          $
-                        </span>
-                        580
-                        <span className="clean-count">
-                          /45 Room
-                        </span>
-                      </h2>
-                      <p className="pricing-one__text">
-                        Spotless Interiors Delivered
-                        <br />
-                        in Just 3
-                        Hours!
-                      </p>
-                    </div>
-                  </div>
-                  <div className="pricing-one__tab-content-right">
-                    <ul className="list-unstyled pricing-one__points">
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            All Standard Cleaning tasks
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Carpet and upholstery cleaning
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Highly Trained Professionals
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Deep scrubbing of bathrooms
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Flexible Scheduling
-                          </p>
-                        </div>
-                      </li>
-                    </ul>
-                    <div className="pricing-one__btn-box">
-                      <a href="/legacy/pages/pricing/index.html">
-                        <span className="icon-plus-1">
-                        </span>
-                        Choose Plan
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                {/* Single Item */}
+                <ul className="tab-buttons list-unstyled">
+                  {PERIOD_LABELS.map((item) => (
+                    <li
+                      key={item.key}
+                      className={`tab-btn ${period === item.key ? 'active-btn' : ''}`}
+                      onClick={() => setPeriod(item.key)}
+                    >
+                      <span>{item.label}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <div className="tab" id="monthly">
-                {/* Single Item */}
-                <div className="pricing-one__tab-content-box">
-                  <div className="pricing-one__tab-content-shape-1">
-                    <img alt="" src="/legacy/assets/images/assets/images/shapes/pricing-one-tab-content-shape-1.png" />
-                  </div>
-                  <div className="pricing-one__tab-content-shape-2">
-                    <img alt="" src="/legacy/assets/images/assets/images/shapes/pricing-one-tab-content-shape-2.png" />
-                  </div>
-                  <div className="pricing-one__tab-content-left">
-                    <div className="pricing-one__img">
-                      <img alt="" src="/legacy/assets/images/assets/images/resources/pricing-one-1-1.jpg" />
+
+              <div className="tabs-content">
+                <div className="tab active-tab" id={period}>
+                  {plans.map((plan) => (
+                    <div key={`${period}-${plan.name}`} className="pricing-one__tab-content-box">
+                      {plan.recommended ? (
+                        <div className="pricing-one__badge">
+                          <p>Đề xuất</p>
+                        </div>
+                      ) : null}
+                      <div className="pricing-one__tab-content-shape-1">
+                        <img
+                          alt=""
+                          src="/legacy/assets/images/shapes/pricing-one-tab-content-shape-1.png"
+                        />
+                      </div>
+                      <div className="pricing-one__tab-content-shape-2">
+                        <img
+                          alt=""
+                          src="/legacy/assets/images/shapes/pricing-one-tab-content-shape-2.png"
+                        />
+                      </div>
+                      <div className="pricing-one__tab-content-left">
+                        <div className="pricing-one__img">
+                          <img alt={plan.name} src={plan.image} />
+                        </div>
+                        <div className="pricing-one__price-box">
+                          <p className="pricing-one__price-pack">{plan.name}</p>
+                          <h2 className="pricing-one__price">
+                            <span className="dolar">$</span>
+                            {plan.price}
+                            <span className="clean-count">{plan.duration}</span>
+                          </h2>
+                          <p className="pricing-one__text">{plan.summary}</p>
+                        </div>
+                      </div>
+                      <div className="pricing-one__tab-content-right">
+                        <ul className="list-unstyled pricing-one__points">
+                          {plan.features.map((feature) => (
+                            <li key={feature}>
+                              <div className="icon">
+                                <span className="icon-check" />
+                              </div>
+                              <div className="text">
+                                <p>{feature}</p>
+                              </div>
+                            </li>
+                          ))}
+                        </ul>
+                        <div className="pricing-one__btn-box">
+                          <a href="/contact">
+                            <span className="icon-plus-1" />
+                            Chọn gói học
+                          </a>
+                        </div>
+                      </div>
                     </div>
-                    <div className="pricing-one__price-box">
-                      <p className="pricing-one__price-pack">
-                        Standard
-                      </p>
-                      <h2 className="pricing-one__price">
-                        <span className="dolar">
-                          $
-                        </span>
-                        320
-                        <span className="clean-count">
-                          /02 Room
-                        </span>
-                      </h2>
-                      <p className="pricing-one__text">
-                        Pristine Office Spaces in
-                        <br />
-                        Under 4 Hours!
-                      </p>
-                    </div>
-                  </div>
-                  <div className="pricing-one__tab-content-right">
-                    <ul className="list-unstyled pricing-one__points">
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Eco-Friendly Cleaning Products
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Flexible Scheduling
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Highly Trained Professionals
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Customized Cleaning Plans
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Flexible Scheduling
-                          </p>
-                        </div>
-                      </li>
-                    </ul>
-                    <div className="pricing-one__btn-box">
-                      <a href="/legacy/pages/pricing/index.html">
-                        <span className="icon-plus-1">
-                        </span>
-                        Choose Plan
-                      </a>
-                    </div>
-                  </div>
+                  ))}
                 </div>
-                {/* Single Item */}
-                {/* Single Item */}
-                <div className="pricing-one__tab-content-box">
-                  <div className="pricing-one__badge">
-                    <p>
-                      Recommended
-                    </p>
-                  </div>
-                  <div className="pricing-one__tab-content-shape-1">
-                    <img alt="" src="/legacy/assets/images/assets/images/shapes/pricing-one-tab-content-shape-1.png" />
-                  </div>
-                  <div className="pricing-one__tab-content-shape-2">
-                    <img alt="" src="/legacy/assets/images/assets/images/shapes/pricing-one-tab-content-shape-2.png" />
-                  </div>
-                  <div className="pricing-one__tab-content-left">
-                    <div className="pricing-one__img">
-                      <img alt="" src="/legacy/assets/images/assets/images/resources/pricing-one-1-2.jpg" />
-                    </div>
-                    <div className="pricing-one__price-box">
-                      <p className="pricing-one__price-pack">
-                        Premium
-                      </p>
-                      <h2 className="pricing-one__price">
-                        <span className="dolar">
-                          $
-                        </span>
-                        440
-                        <span className="clean-count">
-                          /08 Room
-                        </span>
-                      </h2>
-                      <p className="pricing-one__text">
-                        Freshen Up Your Home in 2
-                        <br />
-                        Hours Flat!
-                      </p>
-                    </div>
-                  </div>
-                  <div className="pricing-one__tab-content-right">
-                    <ul className="list-unstyled pricing-one__points">
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Customizable Packages
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Dusting and vacuuming
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Mopping floors
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Cleaning kitchen surfaces
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Aappliances (exteriors)
-                          </p>
-                        </div>
-                      </li>
-                    </ul>
-                    <div className="pricing-one__btn-box">
-                      <a href="/legacy/pages/pricing/index.html">
-                        <span className="icon-plus-1">
-                        </span>
-                        Choose Plan
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                {/* Single Item */}
-                {/* Single Item */}
-                <div className="pricing-one__tab-content-box">
-                  <div className="pricing-one__badge pricing-one__badge--two">
-                    <p>
-                      20% Discount
-                    </p>
-                  </div>
-                  <div className="pricing-one__tab-content-shape-1">
-                    <img alt="" src="/legacy/assets/images/assets/images/shapes/pricing-one-tab-content-shape-1.png" />
-                  </div>
-                  <div className="pricing-one__tab-content-shape-2">
-                    <img alt="" src="/legacy/assets/images/assets/images/shapes/pricing-one-tab-content-shape-2.png" />
-                  </div>
-                  <div className="pricing-one__tab-content-left">
-                    <div className="pricing-one__img">
-                      <img alt="" src="/legacy/assets/images/assets/images/resources/pricing-one-1-3.jpg" />
-                    </div>
-                    <div className="pricing-one__price-box">
-                      <p className="pricing-one__price-pack">
-                        Business
-                      </p>
-                      <h2 className="pricing-one__price">
-                        <span className="dolar">
-                          $
-                        </span>
-                        580
-                        <span className="clean-count">
-                          /45 Room
-                        </span>
-                      </h2>
-                      <p className="pricing-one__text">
-                        Spotless Interiors Delivered
-                        <br />
-                        in Just 3
-                        Hours!
-                      </p>
-                    </div>
-                  </div>
-                  <div className="pricing-one__tab-content-right">
-                    <ul className="list-unstyled pricing-one__points">
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            All Standard Cleaning tasks
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Carpet and upholstery cleaning
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Highly Trained Professionals
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Deep scrubbing of bathrooms
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Flexible Scheduling
-                          </p>
-                        </div>
-                      </li>
-                    </ul>
-                    <div className="pricing-one__btn-box">
-                      <a href="/legacy/pages/pricing/index.html">
-                        <span className="icon-plus-1">
-                        </span>
-                        Choose Plan
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                {/* Single Item */}
-              </div>
-              <div className="tab" id="yearly">
-                {/* Single Item */}
-                <div className="pricing-one__tab-content-box">
-                  <div className="pricing-one__tab-content-shape-1">
-                    <img alt="" src="/legacy/assets/images/assets/images/shapes/pricing-one-tab-content-shape-1.png" />
-                  </div>
-                  <div className="pricing-one__tab-content-shape-2">
-                    <img alt="" src="/legacy/assets/images/assets/images/shapes/pricing-one-tab-content-shape-2.png" />
-                  </div>
-                  <div className="pricing-one__tab-content-left">
-                    <div className="pricing-one__img">
-                      <img alt="" src="/legacy/assets/images/assets/images/resources/pricing-one-1-1.jpg" />
-                    </div>
-                    <div className="pricing-one__price-box">
-                      <p className="pricing-one__price-pack">
-                        Standard
-                      </p>
-                      <h2 className="pricing-one__price">
-                        <span className="dolar">
-                          $
-                        </span>
-                        320
-                        <span className="clean-count">
-                          /02 Room
-                        </span>
-                      </h2>
-                      <p className="pricing-one__text">
-                        Pristine Office Spaces in
-                        <br />
-                        Under 4 Hours!
-                      </p>
-                    </div>
-                  </div>
-                  <div className="pricing-one__tab-content-right">
-                    <ul className="list-unstyled pricing-one__points">
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Eco-Friendly Cleaning Products
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Flexible Scheduling
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Highly Trained Professionals
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Customized Cleaning Plans
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Flexible Scheduling
-                          </p>
-                        </div>
-                      </li>
-                    </ul>
-                    <div className="pricing-one__btn-box">
-                      <a href="/legacy/pages/pricing/index.html">
-                        <span className="icon-plus-1">
-                        </span>
-                        Choose Plan
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                {/* Single Item */}
-                {/* Single Item */}
-                <div className="pricing-one__tab-content-box">
-                  <div className="pricing-one__badge">
-                    <p>
-                      Recommended
-                    </p>
-                  </div>
-                  <div className="pricing-one__tab-content-shape-1">
-                    <img alt="" src="/legacy/assets/images/assets/images/shapes/pricing-one-tab-content-shape-1.png" />
-                  </div>
-                  <div className="pricing-one__tab-content-shape-2">
-                    <img alt="" src="/legacy/assets/images/assets/images/shapes/pricing-one-tab-content-shape-2.png" />
-                  </div>
-                  <div className="pricing-one__tab-content-left">
-                    <div className="pricing-one__img">
-                      <img alt="" src="/legacy/assets/images/assets/images/resources/pricing-one-1-2.jpg" />
-                    </div>
-                    <div className="pricing-one__price-box">
-                      <p className="pricing-one__price-pack">
-                        Premium
-                      </p>
-                      <h2 className="pricing-one__price">
-                        <span className="dolar">
-                          $
-                        </span>
-                        440
-                        <span className="clean-count">
-                          /08 Room
-                        </span>
-                      </h2>
-                      <p className="pricing-one__text">
-                        Freshen Up Your Home in 2
-                        <br />
-                        Hours Flat!
-                      </p>
-                    </div>
-                  </div>
-                  <div className="pricing-one__tab-content-right">
-                    <ul className="list-unstyled pricing-one__points">
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Customizable Packages
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Dusting and vacuuming
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Mopping floors
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Cleaning kitchen surfaces
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Aappliances (exteriors)
-                          </p>
-                        </div>
-                      </li>
-                    </ul>
-                    <div className="pricing-one__btn-box">
-                      <a href="/legacy/pages/pricing/index.html">
-                        <span className="icon-plus-1">
-                        </span>
-                        Choose Plan
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                {/* Single Item */}
-                {/* Single Item */}
-                <div className="pricing-one__tab-content-box">
-                  <div className="pricing-one__badge pricing-one__badge--two">
-                    <p>
-                      20% Discount
-                    </p>
-                  </div>
-                  <div className="pricing-one__tab-content-shape-1">
-                    <img alt="" src="/legacy/assets/images/assets/images/shapes/pricing-one-tab-content-shape-1.png" />
-                  </div>
-                  <div className="pricing-one__tab-content-shape-2">
-                    <img alt="" src="/legacy/assets/images/assets/images/shapes/pricing-one-tab-content-shape-2.png" />
-                  </div>
-                  <div className="pricing-one__tab-content-left">
-                    <div className="pricing-one__img">
-                      <img alt="" src="/legacy/assets/images/assets/images/resources/pricing-one-1-3.jpg" />
-                    </div>
-                    <div className="pricing-one__price-box">
-                      <p className="pricing-one__price-pack">
-                        Business
-                      </p>
-                      <h2 className="pricing-one__price">
-                        <span className="dolar">
-                          $
-                        </span>
-                        580
-                        <span className="clean-count">
-                          /45 Room
-                        </span>
-                      </h2>
-                      <p className="pricing-one__text">
-                        Spotless Interiors Delivered
-                        <br />
-                        in Just 3
-                        Hours!
-                      </p>
-                    </div>
-                  </div>
-                  <div className="pricing-one__tab-content-right">
-                    <ul className="list-unstyled pricing-one__points">
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            All Standard Cleaning tasks
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Carpet and upholstery cleaning
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Highly Trained Professionals
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Deep scrubbing of bathrooms
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="icon">
-                          <span className="icon-check">
-                          </span>
-                        </div>
-                        <div className="text">
-                          <p>
-                            Flexible Scheduling
-                          </p>
-                        </div>
-                      </li>
-                    </ul>
-                    <div className="pricing-one__btn-box">
-                      <a href="/legacy/pages/pricing/index.html">
-                        <span className="icon-plus-1">
-                        </span>
-                        Choose Plan
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                {/* Single Item */}
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    {/*Pricing One End*/}
-    {/*Blog One Start*/}
+      </section>
+      {/*Pricing One End*/}
+      {/*Blog One Start*/}
     </>
   )
 }

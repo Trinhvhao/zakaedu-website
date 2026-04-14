@@ -1,28 +1,28 @@
 const TEAM_MEMBERS = [
   {
     name: 'Emily Carter',
-    role: 'Operations Manager',
-    image: '/legacy/assets/images/assets/images/team/team-1-1.jpg',
+    role: 'Giám đốc học vụ',
+    image: '/legacy/assets/images/team/team-1-1.jpg',
   },
   {
     name: 'Michael Bennett',
-    role: 'Team Leader',
-    image: '/legacy/assets/images/assets/images/team/team-1-2.jpg',
+    role: 'Giáo viên tiếng Anh cao cấp',
+    image: '/legacy/assets/images/team/team-1-2.jpg',
   },
   {
     name: 'Sophia Ramirez',
-    role: 'Quality Control Supervisor',
-    image: '/legacy/assets/images/assets/images/team/team-1-3.jpg',
+    role: 'Chuyên gia phát âm',
+    image: '/legacy/assets/images/team/team-1-3.jpg',
   },
   {
     name: 'Ethan Collins',
-    role: 'Customer Service Coordinator',
-    image: '/legacy/assets/images/assets/images/team/team-1-4.jpg',
+    role: 'Cố vấn CLB giao tiếp',
+    image: '/legacy/assets/images/team/team-1-4.jpg',
   },
   {
     name: 'Ava Thompson',
-    role: 'Client Success Specialist',
-    image: '/legacy/assets/images/assets/images/team/team-1-2.jpg',
+    role: 'Chuyên viên đồng hành phụ huynh',
+    image: '/legacy/assets/images/team/team-1-2.jpg',
   },
 ]
 
@@ -31,10 +31,10 @@ export default function TeamSection() {
     <>
       <section className="team-one" id="team">
         <div className="team-one__shape-1 float-bob-y">
-          <img alt="" src="/legacy/assets/images/assets/images/shapes/team-one-shape-1.png" />
+          <img alt="" src="/legacy/assets/images/shapes/team-one-shape-1.png" />
         </div>
         <div className="team-one__shape-2 float-bob-x">
-          <img alt="" src="/legacy/assets/images/assets/images/shapes/team-one-shape-2.png" />
+          <img alt="" src="/legacy/assets/images/shapes/team-one-shape-2.png" />
         </div>
         <div className="team-one__shape-3" />
         <div className="team-one__shape-4" />
@@ -45,15 +45,15 @@ export default function TeamSection() {
                 <div className="section-title__tagline-shape" />
                 <div className="section-title__tagline-shape-2" />
               </div>
-              <span className="section-title__tagline">OUR Team Member</span>
+              <span className="section-title__tagline">Đội ngũ giảng dạy</span>
             </div>
             <h2 className="section-title__title title-animation">
-              Meet the Experts Behind Our
+              Gặp gỡ những người thầy đồng hành
               <br />
-              Success.
-              <span>Our Dedicated Team at</span>
+              mọi cột mốc tiến bộ của bé.{' '}
+              <span>Đội ngũ tận tâm tại</span>
               <br />
-              <span>Your Service</span>
+              <span>trung tâm ZakaEdu</span>
             </h2>
           </div>
 

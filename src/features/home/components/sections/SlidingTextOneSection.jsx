@@ -7,39 +7,39 @@ export default function SlidingTextOneSection() {
       <div className="sliding-text-one__wrap">
         <ReactMarqueeList duration={30} listClassName="sliding-text__list list-unstyled">
           <li>
-            <h2 className="sliding-text__title" data-hover="Organizing">
-              Organizing
-              <img alt="" src="/legacy/assets/images/assets/images/shapes/sliding-text-shape-1.png" />
+            <h2 className="sliding-text__title" data-hover="Phát âm">
+              Phát âm
+              <img alt="" src="/legacy/assets/images/shapes/sliding-text-shape-1.png" />
             </h2>
           </li>
           <li>
-            <h2 className="sliding-text__title" data-hover="Sanitizing">
-              Sanitizing
-              <img alt="" src="/legacy/assets/images/assets/images/shapes/sliding-text-shape-1.png" />
+            <h2 className="sliding-text__title" data-hover="Giao tiếp">
+              Giao tiếp
+              <img alt="" src="/legacy/assets/images/shapes/sliding-text-shape-1.png" />
             </h2>
           </li>
           <li>
-            <h2 className="sliding-text__title" data-hover="Mopping">
-              Mopping
-              <img alt="" src="/legacy/assets/images/assets/images/shapes/sliding-text-shape-1.png" />
+            <h2 className="sliding-text__title" data-hover="Đọc hiểu">
+              Đọc hiểu
+              <img alt="" src="/legacy/assets/images/shapes/sliding-text-shape-1.png" />
             </h2>
           </li>
           <li>
-            <h2 className="sliding-text__title" data-hover="Dusting">
-              Dusting
-              <img alt="" src="/legacy/assets/images/assets/images/shapes/sliding-text-shape-1.png" />
+            <h2 className="sliding-text__title" data-hover="Viết">
+              Viết
+              <img alt="" src="/legacy/assets/images/shapes/sliding-text-shape-1.png" />
             </h2>
           </li>
           <li>
-            <h2 className="sliding-text__title" data-hover="Vacuuming">
-              Vacuuming
-              <img alt="" src="/legacy/assets/images/assets/images/shapes/sliding-text-shape-1.png" />
+            <h2 className="sliding-text__title" data-hover="Tự tin">
+              Tự tin
+              <img alt="" src="/legacy/assets/images/shapes/sliding-text-shape-1.png" />
             </h2>
           </li>
           <li>
-            <h2 className="sliding-text__title" data-hover="Polishing">
-              Polishing
-              <img alt="" src="/legacy/assets/images/assets/images/shapes/sliding-text-shape-1.png" />
+            <h2 className="sliding-text__title" data-hover="Sáng tạo">
+              Sáng tạo
+              <img alt="" src="/legacy/assets/images/shapes/sliding-text-shape-1.png" />
             </h2>
           </li>
         </ReactMarqueeList>

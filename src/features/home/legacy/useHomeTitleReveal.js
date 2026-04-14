@@ -1,7 +1,9 @@
 import { useEffect } from 'react'
 
-export function useHomeTitleReveal() {
+export function useHomeTitleReveal(enabled = true) {
   useEffect(() => {
+    if (!enabled) return undefined
+
     const titles = Array.from(
       document.querySelectorAll('.legacy-home-page .sec-title-animation .title-animation'),
     )
@@ -60,5 +62,5 @@ export function useHomeTitleReveal() {
         title.style.removeProperty('--title-delay')
       })
     }
-  }, [])
+  }, [enabled])
 }

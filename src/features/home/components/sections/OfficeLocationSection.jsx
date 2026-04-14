@@ -15,23 +15,24 @@ export default function OfficeLocationSection() {
                     </div>
                   </div>
                   <span className="section-title__tagline">
-                    OUR Offices
+                    Cơ sở của chúng tôi
                   </span>
                 </div>
                 <h2 className="section-title__title title-animation">
-                  Discover the Location of Our Office and
+                  Đến trung tâm để
+                  {' '}
                   <span>
-                    Visit Us Today
+                    gặp đội ngũ tư vấn
                   </span>
                 </h2>
               </div>
               <p className="office-location__text">
-                Find our office location and stop by today—we’d love to see
-                you!
+                Mời bạn đến trung tâm để kiểm tra đầu vào
+                và tư vấn lộ trình học phù hợp cho bé.
               </p>
               <div className="office-location__btn-box">
-                <a className="thm-btn" href="/legacy/pages/about/index.html">
-                  Send Message
+                <a className="thm-btn" href="/contact">
+                  Gửi thông tin
                   <span>
                     <i className="icon-diagonal-arrow">
                     </i>
@@ -43,11 +44,11 @@ export default function OfficeLocationSection() {
           <div className="col-xl-8">
             <div className="office-location__right">
               <div className="office-location__shape-1 float-bob-x">
-                <img alt="" src="/legacy/assets/images/assets/images/shapes/office-location-shape-1.png" />
+                <img alt="" src="/legacy/assets/images/shapes/office-location-shape-1.png" />
               </div>
               <div className="office-location__map-box">
                 <div className="office-location__map-img">
-                  <img alt="" src="/legacy/assets/images/assets/images/shapes/office-location-map.png" />
+                  <img alt="" src="/legacy/assets/images/shapes/office-location-map.png" />
                 </div>
                 <div className="office-location__point-1">
                   <div className="office-location__markar">
@@ -58,16 +59,16 @@ export default function OfficeLocationSection() {
                     <div className="office-location__popup">
                       <div className="office-location__popup-inner">
                         <div className="office-location__popup-img">
-                          <img alt="" src="/legacy/assets/images/assets/images/resources/office-location-popup-img-1.jpg" />
+                          <img alt="" src="/legacy/assets/images/resources/office-location-popup-img-1.jpg" />
                         </div>
                         <div className="office-location__popup-content">
                           <p>
-                            Suite 567
+                            Toà V4,
                             <br />
-                            Springfield, IL 62701
+                            The Vesta
                           </p>
                           <span>
-                            1234 Elm Street,
+                            Trung tâm tiếng Anh thiếu nhi
                           </span>
                         </div>
                       </div>
@@ -83,16 +84,16 @@ export default function OfficeLocationSection() {
                     <div className="office-location__popup">
                       <div className="office-location__popup-inner">
                         <div className="office-location__popup-img">
-                          <img alt="" src="/legacy/assets/images/assets/images/resources/office-location-popup-img-2.jpg" />
+                          <img alt="" src="/legacy/assets/images/resources/office-location-popup-img-2.jpg" />
                         </div>
                         <div className="office-location__popup-content">
                           <p>
-                            Suite 567
+                            Toà V4,
                             <br />
-                            Springfield, IL 62701
+                            The Vesta
                           </p>
                           <span>
-                            1234 Elm Street,
+                            Trung tâm tiếng Anh thiếu nhi
                           </span>
                         </div>
                       </div>
@@ -108,16 +109,16 @@ export default function OfficeLocationSection() {
                     <div className="office-location__popup">
                       <div className="office-location__popup-inner">
                         <div className="office-location__popup-img">
-                          <img alt="" src="/legacy/assets/images/assets/images/resources/office-location-popup-img-3.jpg" />
+                          <img alt="" src="/legacy/assets/images/resources/office-location-popup-img-3.jpg" />
                         </div>
                         <div className="office-location__popup-content">
                           <p>
-                            Suite 567
+                            Toà V4,
                             <br />
-                            Springfield, IL 62701
+                            The Vesta
                           </p>
                           <span>
-                            1234 Elm Street,
+                            Trung tâm tiếng Anh thiếu nhi
                           </span>
                         </div>
                       </div>
@@ -133,16 +134,16 @@ export default function OfficeLocationSection() {
                     <div className="office-location__popup">
                       <div className="office-location__popup-inner">
                         <div className="office-location__popup-img">
-                          <img alt="" src="/legacy/assets/images/assets/images/resources/office-location-popup-img-4.jpg" />
+                          <img alt="" src="/legacy/assets/images/resources/office-location-popup-img-4.jpg" />
                         </div>
                         <div className="office-location__popup-content">
                           <p>
-                            Suite 567
+                            Toà V4,
                             <br />
-                            Springfield, IL 62701
+                            The Vesta
                           </p>
                           <span>
-                            1234 Elm Street,
+                            Trung tâm tiếng Anh thiếu nhi
                           </span>
                         </div>
                       </div>
@@ -158,16 +159,16 @@ export default function OfficeLocationSection() {
                     <div className="office-location__popup">
                       <div className="office-location__popup-inner">
                         <div className="office-location__popup-img">
-                          <img alt="" src="/legacy/assets/images/assets/images/resources/office-location-popup-img-5.jpg" />
+                          <img alt="" src="/legacy/assets/images/resources/office-location-popup-img-5.jpg" />
                         </div>
                         <div className="office-location__popup-content">
                           <p>
-                            Suite 567
+                            Toà V4,
                             <br />
-                            Springfield, IL 62701
+                            The Vesta
                           </p>
                           <span>
-                            1234 Elm Street,
+                            Trung tâm tiếng Anh thiếu nhi
                           </span>
                         </div>
                       </div>

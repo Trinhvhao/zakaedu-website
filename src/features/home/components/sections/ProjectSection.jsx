@@ -2,64 +2,64 @@ import { useMemo, useState } from 'react'
 import ReactMarqueeList from '../shared/ReactMarqueeList'
 
 const FILTERS = [
-  { key: 'all', label: 'All', icon: 'icon-catagory' },
-  { key: 'corporate', label: 'Corporate Office', icon: 'icon-pen-ruler' },
-  { key: 'house', label: 'House Cleaning', icon: 'icon-computer' },
-  { key: 'cargarage', label: 'Car Garage', icon: 'icon-bullhorn' },
-  { key: 'bakery', label: 'Bakery & Factory', icon: 'icon-bullhorn' },
-  { key: 'sparklyclean', label: 'Sparkly Clean', icon: 'icon-bullhorn' },
+  { key: 'all', label: 'Tất cả', icon: 'icon-catagory' },
+  { key: 'corporate', label: 'Lộ trình Cambridge', icon: 'icon-pen-ruler' },
+  { key: 'house', label: 'CLB giao tiếp', icon: 'icon-computer' },
+  { key: 'cargarage', label: 'Đọc & Viết', icon: 'icon-bullhorn' },
+  { key: 'bakery', label: 'STEM tiếng Anh', icon: 'icon-bullhorn' },
+  { key: 'sparklyclean', label: 'Đồng hành phụ huynh', icon: 'icon-bullhorn' },
 ]
 
 const PROJECT_ITEMS = [
   {
     type: 'project',
     key: 'project-1',
-    image: '/legacy/assets/images/assets/images/project/project-1-1.jpg',
-    tag: 'Residential',
-    date: 'November 24',
-    title: 'Sparkle & Shine Services',
+    image: '/legacy/assets/images/project/project-1-1.jpg',
+    tag: 'Lớp nhập môn',
+    date: 'Tháng 11/24',
+    title: 'Khởi động phát âm cho học viên mới',
     categories: ['house', 'sparklyclean', 'bakery'],
   },
   {
     type: 'project',
     key: 'project-2',
-    image: '/legacy/assets/images/assets/images/project/project-1-2.jpg',
-    tag: 'Commercial',
-    date: 'November 24',
-    title: 'Pure Clean Solutions',
+    image: '/legacy/assets/images/project/project-1-2.jpg',
+    tag: 'Cambridge',
+    date: 'Tháng 11/24',
+    title: 'Lộ trình Starters cho học viên nhỏ',
     categories: ['corporate', 'bakery'],
   },
   {
     type: 'project',
     key: 'project-3',
-    image: '/legacy/assets/images/assets/images/project/project-1-3.jpg',
-    tag: 'Deep CLEAN',
-    date: 'November 24',
-    title: 'Fresh Space Experts',
+    image: '/legacy/assets/images/project/project-1-3.jpg',
+    tag: 'CLB giao tiếp',
+    date: 'Tháng 11/24',
+    title: 'Thử thách giao tiếp cuối tuần',
     categories: ['cargarage', 'house', 'bakery'],
   },
   {
     type: 'project',
     key: 'project-4',
-    image: '/legacy/assets/images/assets/images/project/project-1-4.jpg',
-    tag: 'Moveout',
-    date: 'November 24',
-    title: 'Eco Gleam Crew',
+    image: '/legacy/assets/images/project/project-1-4.jpg',
+    tag: 'Lộ trình đọc',
+    date: 'Tháng 11/24',
+    title: 'Phát triển đọc hiểu qua truyện kể',
     categories: ['corporate', 'cargarage', 'sparklyclean'],
   },
   {
     type: 'project',
     key: 'project-5',
-    image: '/legacy/assets/images/assets/images/project/project-1-5.jpg',
-    tag: 'Specialized',
-    date: 'November 24',
-    title: 'Neat Nest Pros',
+    image: '/legacy/assets/images/project/project-1-5.jpg',
+    tag: 'Đồng hành gia đình',
+    date: 'Tháng 11/24',
+    title: 'Hướng dẫn luyện tập tại nhà cho phụ huynh',
     categories: ['corporate', 'bakery', 'house'],
   },
   {
     type: 'cta',
     key: 'project-cta',
-    image: '/legacy/assets/images/assets/images/project/project-one-single-two-img-1.png',
+    image: '/legacy/assets/images/project/project-one-single-two-img-1.png',
     categories: ['sparklyclean', 'house', 'bakery'],
   },
 ]
@@ -79,14 +79,14 @@ export default function ProjectSection() {
           className="project-one__bg-shape"
           style={{
             backgroundImage:
-              'url("/legacy/assets/images/assets/images/shapes/project-one-bg-shape.png")',
+              'url("/legacy/assets/images/shapes/project-one-bg-shape.png")',
           }}
         />
         <div
           className="project-one__bg-shape-2"
           style={{
             backgroundImage:
-              'url("/legacy/assets/images/assets/images/shapes/project-one-bg-shape-2.png")',
+              'url("/legacy/assets/images/shapes/project-one-bg-shape-2.png")',
           }}
         />
         <div className="project-one__shape-1" />
@@ -98,15 +98,15 @@ export default function ProjectSection() {
                 <div className="section-title__tagline-shape" />
                 <div className="section-title__tagline-shape-2" />
               </div>
-              <span className="section-title__tagline">Our Projects</span>
+              <span className="section-title__tagline">Dự án học tập</span>
             </div>
             <h2 className="section-title__title title-animation">
-              A showcase of projects
-              <span>that</span>
+              Tổng hợp các hành trình học tập{' '}
+              <span>giúp</span>
               <br />
               <span>
-                define
-                excellence
+                học viên
+                tiến bộ bền vững
               </span>
             </h2>
           </div>
@@ -136,9 +136,9 @@ export default function ProjectSection() {
                         </div>
                         <h3 className="project-one__title-2">
                           <a href="/legacy/pages/project-details/index.html">
-                            Do you have any project
+                            Bạn đang tìm lộ trình tiếng Anh
                             <br />
-                            ideas in mind?
+                            phù hợp cho bé?
                           </a>
                         </h3>
                         <div className="project-one__view-box-2">
@@ -148,9 +148,9 @@ export default function ProjectSection() {
                           >
                             <i className="icon-diagonal-arrow" />
                             <span>
-                              View More
+                              Xem them
                               <br />
-                              Project
+                              chuong trinh
                             </span>
                           </a>
                         </div>
@@ -158,16 +158,16 @@ export default function ProjectSection() {
                           <li>
                             <h2
                               className="project-one__sliding-text-title"
-                              data-hover="Get In Touch"
+                              data-hover="Liên hệ ngay"
                             >
-                              Get In
-                              Touch
+                              Liên hệ
+                              ngay
                             </h2>
                           </li>
                         </ReactMarqueeList>
                         <div className="project-one__need-help">
-                          <p>Need Support?</p>
-                          <a href="tel:120045678910">12 (00) 456 78910</a>
+                          <p>Cần tư vấn?</p>
+                          <a href="tel:0354901750">0354 901 750</a>
                         </div>
                       </div>
                     </div>
@@ -184,7 +184,7 @@ export default function ProjectSection() {
                         <div className="project-one__view-box">
                           <a className="project-one__view" href="/legacy/pages/project-details/index.html">
                             <i className="icon-diagonal-arrow" />
-                            <span>View More</span>
+                            <span>Xem chi tiết</span>
                           </a>
                         </div>
                       </div>

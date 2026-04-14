@@ -19,8 +19,10 @@ function markCurrentMenu(hash) {
   anchor.parentElement.classList.add('current')
 }
 
-export function useLegacyHomeUiControls() {
+export function useLegacyHomeUiControls(enabled = true) {
   useEffect(() => {
+    if (!enabled) return undefined
+
     const homeRoot = document.querySelector('.legacy-home-page')
     if (!(homeRoot instanceof HTMLElement)) return undefined
 
@@ -223,5 +225,5 @@ export function useLegacyHomeUiControls() {
       closeMobileNav()
       closeSearch()
     }
-  }, [])
+  }, [enabled])
 }

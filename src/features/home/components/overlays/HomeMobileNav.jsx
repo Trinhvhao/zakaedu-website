@@ -12,31 +12,31 @@ export default function HomeMobileNav() {
           </span>
           <div className="logo-box">
             <a aria-label="logo image" href="/home">
-              <img alt="Freshflow logo" src="/legacy/assets/images/assets/images/resources/logo-2.png" width={150} />
+              <img alt="ZakaEdu logo" src="/legacy/assets/images/resources/logo-2.png" width={150} />
             </a>
           </div>
           <div className="mobile-nav__container">
             <ul className="main-menu__list one-page-scroll-menu list-unstyled">
               <li className="scrollToLink">
-                <a href="#home">Home</a>
+                <a href="#home">Trang chủ</a>
               </li>
               <li className="scrollToLink">
-                <a href="#about">About</a>
+                <a href="#about">Về chúng tôi</a>
               </li>
               <li className="scrollToLink">
-                <a href="#services">Services</a>
+                <a href="#services">Chương trình</a>
               </li>
               <li className="scrollToLink">
                 <a href="#project">Project</a>
               </li>
               <li className="scrollToLink">
-                <a href="#team">Team</a>
+                <a href="#team">Đội ngũ</a>
               </li>
               <li className="scrollToLink">
-                <a href="#contact">Contact</a>
+                <a href="#contact">Liên hệ</a>
               </li>
               <li className="scrollToLink">
-                <a href="#blog">Blog</a>
+                <a href="#blog">Tin tức</a>
               </li>
             </ul>
           </div>
@@ -44,15 +44,15 @@ export default function HomeMobileNav() {
             <li>
               <i className="fa fa-envelope">
               </i>
-              <a href="mailto:needhelp@packageName__.com">
-                needhelp@Freshflow.com
+              <a href="mailto:zakaedu.contact@gmail.com">
+                zakaedu.contact@gmail.com
               </a>
             </li>
             <li>
               <i className="fas fa-phone">
               </i>
-              <a href="tel:666-888-0000">
-                666 888 0000
+              <a href="tel:0354901750">
+                0354 901 750
               </a>
             </li>
           </ul>

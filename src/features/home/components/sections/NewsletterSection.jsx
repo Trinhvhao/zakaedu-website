@@ -4,22 +4,22 @@ export default function NewsletterSection() {
     <section className="newsletter-one">
       <div className="container">
         <div className="newsletter-one__inner">
-          <div className="newsletter-one__shape-bg" style={{backgroundImage: 'url("/legacy/assets/images/assets/images/shapes/newsletter-one-shape-bg.png")'}}>
+          <div className="newsletter-one__shape-bg" style={{backgroundImage: 'url("/legacy/assets/images/shapes/newsletter-one-shape-bg.png")'}}>
           </div>
           <div className="newsletter-one__shape-1 float-bob-x">
-            <img alt="" src="/legacy/assets/images/assets/images/shapes/newsletter-one-shape-1.png" />
+            <img alt="" src="/legacy/assets/images/shapes/newsletter-one-shape-1.png" />
           </div>
           <div className="newsletter-one__shape-2 float-bob-y">
-            <img alt="" src="/legacy/assets/images/assets/images/shapes/newsletter-one-shape-2.png" />
+            <img alt="" src="/legacy/assets/images/shapes/newsletter-one-shape-2.png" />
           </div>
           <div className="row">
             <div className="col-xl-4 col-lg-6">
               <div className="newsletter-one__title-box">
                 <h2 className="newsletter-one__title">
-                  Subscribe
+                  Đăng ký
                 </h2>
                 <p className="newsletter-one__sub-title">
-                  Newsletter
+                  Bản tin phụ huynh
                 </p>
               </div>
             </div>
@@ -28,17 +28,17 @@ export default function NewsletterSection() {
                 <div className="newsletter-one__img-shape">
                   <div className="newsletter-one__img-box-1">
                     <div className="newsletter-one__img-1">
-                      <img alt="" src="/legacy/assets/images/assets/images/resources/newsletter-one-img-1-1.jpg" />
+                      <img alt="" src="/legacy/assets/images/resources/newsletter-one-img-1-1.jpg" />
                     </div>
                   </div>
                   <div className="newsletter-one__img-box-2">
                     <div className="newsletter-one__img-2">
-                      <img alt="" src="/legacy/assets/images/assets/images/resources/newsletter-one-img-1-2.jpg" />
+                      <img alt="" src="/legacy/assets/images/resources/newsletter-one-img-1-2.jpg" />
                     </div>
                   </div>
                   <div className="newsletter-one__img-box-3">
                     <div className="newsletter-one__img-3">
-                      <img alt="" src="/legacy/assets/images/assets/images/resources/newsletter-one-img-1-3.jpg" />
+                      <img alt="" src="/legacy/assets/images/resources/newsletter-one-img-1-3.jpg" />
                     </div>
                   </div>
                 </div>
@@ -48,30 +48,30 @@ export default function NewsletterSection() {
               <div className="newsletter-one__form-box">
                 <form className="newsletter-one__form">
                   <div className="newsletter-one__input">
-                    <input placeholder="Email Address" type="email" />
+                    <input placeholder="Địa chỉ email" type="email" />
                   </div>
                   <button className="newsletter-one__btn" type="submit">
-                    Subscribe Now
+                    Nhận mẹo học hay
                     <span className="icon-send">
                     </span>
                   </button>
                 </form>
                 <p className="newsletter-one__form-text">
-                  By Subscribing you agree to the
-                  <a href="/legacy/pages/about/index.html">
-                    Terms
-                    of use
+                  Khi đăng ký, bạn đồng ý với
+                  <a href="/about">
+                    Điều khoản
+                    sử dụng
                   </a>
                   &amp;
-                  <a href="/legacy/pages/about/index.html">
-                    Privacy Policy
+                  <a href="/about">
+                    Chính sách bảo mật
                   </a>
                 </p>
               </div>
             </div>
           </div>
           <div className="newsletter-one__big-text">
-            NEWSLETTER
+            ZAKAEDU
           </div>
         </div>
       </div>

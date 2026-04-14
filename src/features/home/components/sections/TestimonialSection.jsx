@@ -1,11 +1,116 @@
 import ReactMarqueeList from '../shared/ReactMarqueeList'
 
+const TOP_TESTIMONIALS = [
+  {
+    name: 'Emily Carter',
+    role: 'Phụ huynh học viên',
+    title: 'Rất đáng để đầu tư!',
+    quoteLines: [
+      'Con tôi từng ngại nói tiếng Anh,',
+      'nhưng sau vài tháng học tại trung tâm',
+      'bé đã tự tin giao tiếp hơn rất nhiều!',
+    ],
+    image: '/legacy/assets/images/testimonial/testimonial-1-1.jpg',
+  },
+  {
+    name: 'Michael Brown',
+    role: 'Phụ huynh lớp 4',
+    title: 'Chuyên nghiệp và tận tâm!',
+    quoteLines: [
+      'Giáo viên theo sát từng buổi học,',
+      'bài giảng dễ hiểu và rất sinh động,',
+      'con tôi học vui và tiến bộ rõ ràng.',
+    ],
+    image: '/legacy/assets/images/testimonial/testimonial-1-2.jpg',
+  },
+  {
+    name: 'Sarah Thompson',
+    role: 'Phụ huynh lớp 3',
+    title: 'Tiến bộ rõ sau từng buổi!',
+    quoteLines: [
+      'Mỗi tuần con đều có bài tập ứng dụng,',
+      'phát âm chuẩn hơn và nói tự nhiên hơn,',
+      'gia đình tôi rất hài lòng với kết quả.',
+    ],
+    image: '/legacy/assets/images/testimonial/testimonial-1-3.jpg',
+  },
+  {
+    name: 'John Peterson',
+    role: 'Phụ huynh lớp 5',
+    title: 'Cực kỳ yên tâm khi gửi con!',
+    quoteLines: [
+      'Lịch học linh hoạt nên gia đình dễ sắp xếp,',
+      'giáo viên nhiệt tình và quan tâm sát sao,',
+      'con tôi tự tin hơn sau từng chủ đề học.',
+    ],
+    image: '/legacy/assets/images/testimonial/testimonial-1-4.jpg',
+  },
+]
+
+const BOTTOM_TESTIMONIALS = [
+  {
+    ...TOP_TESTIMONIALS[2],
+    image: '/legacy/assets/images/testimonial/testimonial-1-5.jpg',
+  },
+  {
+    ...TOP_TESTIMONIALS[0],
+    image: '/legacy/assets/images/testimonial/testimonial-1-6.jpg',
+  },
+  {
+    ...TOP_TESTIMONIALS[1],
+    image: '/legacy/assets/images/testimonial/testimonial-1-7.jpg',
+  },
+  {
+    ...TOP_TESTIMONIALS[3],
+    image: '/legacy/assets/images/testimonial/testimonial-1-8.jpg',
+  },
+]
+
+function TestimonialCard({ item }) {
+  return (
+    <div className="testimonial-one__single">
+      <div className="testimonial-one__quote-icon">
+        <img alt="" src="/legacy/assets/images/icon/quote-icon-1.png" />
+      </div>
+      <div className="testimonial-one__client-info">
+        <div className="testimonial-one__client-content">
+          <h4 className="testimonial-one__client-name">
+            <a href="/legacy/pages/testimonials/index.html">{item.name}</a>
+          </h4>
+          <p className="testimonial-one__client-sub-title">{item.role}</p>
+        </div>
+        <div className="testimonial-one__client-img">
+          <img alt="" src={item.image} />
+        </div>
+      </div>
+      <span className="testimonial-one__sub-title">{item.title}</span>
+      <p className="testimonial-one__text">
+        &quot;{item.quoteLines[0]}
+        <br />
+        {item.quoteLines[1]}
+        <br />
+        {item.quoteLines[2]}&quot;
+      </p>
+      <div className="testimonial-one__rating-and-date">
+        <div className="testimonial-one__rating">
+          <span className="icon-star" />
+          <span className="icon-star" />
+          <span className="icon-star" />
+          <span className="icon-star" />
+          <span className="icon-star" />
+        </div>
+        <p className="testimonial-one__date">Mới đây</p>
+      </div>
+    </div>
+  )
+}
+
 export default function TestimonialSection() {
   return (
     <>
     <section className="testimonial-one">
       <div className="testimonial-one__shape-1">
-        <img alt="" src="/legacy/assets/images/assets/images/shapes/testimonial-one-shape-1.png" />
+        <img alt="" src="/legacy/assets/images/shapes/testimonial-one-shape-1.png" />
       </div>
       <div className="testimonial-one__shape-2">
       </div>
@@ -21,429 +126,34 @@ export default function TestimonialSection() {
               </div>
             </div>
             <span className="section-title__tagline">
-              OUR TESTIMONIAL
+              Đánh giá phụ huynh
             </span>
           </div>
           <h2 className="section-title__title title-animation">
-            Clients Have to Say
+            Phụ huynh nói gì{' '}
             <span>
-              About
-              Their
+              về hành trình
+              học tập
             </span>
             <br />
             <span>
-              Experience with Us!
+              tiếng Anh của bé?
             </span>
           </h2>
         </div>
-        <ReactMarqueeList duration={42} listClassName="list-unstyled testimonial-one__list">
-          <li>
-            <div className="testimonial-one__single">
-              <div className="testimonial-one__quote-icon">
-                <img alt="" src="/legacy/assets/images/assets/images/icon/quote-icon-1.png" />
-              </div>
-              <div className="testimonial-one__client-info">
-                <div className="testimonial-one__client-content">
-                  <h4 className="testimonial-one__client-name">
-                    <a href="/legacy/pages/testimonials/index.html">
-                      Emily
-                      Carter
-                    </a>
-                  </h4>
-                  <p className="testimonial-one__client-sub-title">
-                    Business Owner
-                  </p>
-                </div>
-                <div className="testimonial-one__client-img">
-                  <img alt="" src="/legacy/assets/images/assets/images/testimonial/testimonial-1-1.jpg" />
-                </div>
-              </div>
-              <span className="testimonial-one__sub-title">
-                Worth every penny!
-              </span>
-              <p className="testimonial-one__text">
-                "Their attention to detail is unmatched. I’ve used
-                <br />
-                other
-                cleaning services before, but this one stands
-                <br />
-                out! I recommended tehm"
-              </p>
-              <div className="testimonial-one__rating-and-date">
-                <div className="testimonial-one__rating">
-                  <span className="icon-star">
-                  </span>
-                  <span className="icon-star">
-                  </span>
-                  <span className="icon-star">
-                  </span>
-                  <span className="last-icon icon-star">
-                  </span>
-                  <span className="last-icon icon-star">
-                  </span>
-                </div>
-                <p className="testimonial-one__date">
-                  10 Days Ago
-                </p>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div className="testimonial-one__single">
-              <div className="testimonial-one__quote-icon">
-                <img alt="" src="/legacy/assets/images/assets/images/icon/quote-icon-1.png" />
-              </div>
-              <div className="testimonial-one__client-info">
-                <div className="testimonial-one__client-content">
-                  <h4 className="testimonial-one__client-name">
-                    <a href="/legacy/pages/testimonials/index.html">
-                      Michael
-                      Brown
-                    </a>
-                  </h4>
-                  <p className="testimonial-one__client-sub-title">
-                    Financial Analyst
-                  </p>
-                </div>
-                <div className="testimonial-one__client-img">
-                  <img alt="" src="/legacy/assets/images/assets/images/testimonial/testimonial-1-2.jpg" />
-                </div>
-              </div>
-              <span className="testimonial-one__sub-title">
-                Efficient and reliable!
-              </span>
-              <p className="testimonial-one__text">
-                "I appreciate their consistent quality and flexibility.
-                <br />
-                They make sure my home always looks its best. We
-                <br />
-                are hope they will best in future"
-              </p>
-              <div className="testimonial-one__rating-and-date">
-                <div className="testimonial-one__rating">
-                  <span className="icon-star">
-                  </span>
-                  <span className="icon-star">
-                  </span>
-                  <span className="icon-star">
-                  </span>
-                  <span className="last-icon icon-star">
-                  </span>
-                  <span className="last-icon icon-star">
-                  </span>
-                </div>
-                <p className="testimonial-one__date">
-                  10 Days Ago
-                </p>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div className="testimonial-one__single">
-              <div className="testimonial-one__quote-icon">
-                <img alt="" src="/legacy/assets/images/assets/images/icon/quote-icon-1.png" />
-              </div>
-              <div className="testimonial-one__client-info">
-                <div className="testimonial-one__client-content">
-                  <h4 className="testimonial-one__client-name">
-                    <a href="/legacy/pages/testimonials/index.html">
-                      Sarah
-                      Thompson
-                    </a>
-                  </h4>
-                  <p className="testimonial-one__client-sub-title">
-                    Marketing Manager
-                  </p>
-                </div>
-                <div className="testimonial-one__client-img">
-                  <img alt="" src="/legacy/assets/images/assets/images/testimonial/testimonial-1-3.jpg" />
-                </div>
-              </div>
-              <span className="testimonial-one__sub-title">
-                Spotless results every time!
-              </span>
-              <p className="testimonial-one__text">
-                "I’ve never seen my office look so clean and
-                <br />
-                organized.
-                Their team is punctual, professional, and
-                <br />
-                meticulous. Highly recommended!"
-              </p>
-              <div className="testimonial-one__rating-and-date">
-                <div className="testimonial-one__rating">
-                  <span className="icon-star">
-                  </span>
-                  <span className="icon-star">
-                  </span>
-                  <span className="icon-star">
-                  </span>
-                  <span className="last-icon icon-star">
-                  </span>
-                  <span className="last-icon icon-star">
-                  </span>
-                </div>
-                <p className="testimonial-one__date">
-                  10 Days Ago
-                </p>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div className="testimonial-one__single">
-              <div className="testimonial-one__quote-icon">
-                <img alt="" src="/legacy/assets/images/assets/images/icon/quote-icon-1.png" />
-              </div>
-              <div className="testimonial-one__client-info">
-                <div className="testimonial-one__client-content">
-                  <h4 className="testimonial-one__client-name">
-                    <a href="/legacy/pages/testimonials/index.html">
-                      John
-                      Peterson
-                    </a>
-                  </h4>
-                  <p className="testimonial-one__client-sub-title">
-                    Software Developer
-                  </p>
-                </div>
-                <div className="testimonial-one__client-img">
-                  <img alt="" src="/legacy/assets/images/assets/images/testimonial/testimonial-1-4.jpg" />
-                </div>
-              </div>
-              <span className="testimonial-one__sub-title">
-                A true lifesaver!
-              </span>
-              <p className="testimonial-one__text">
-                "With a busy schedule, it’s tough to maintain a clean
-                <br />
-                home.
-                Their services have been a game-changer for
-                <br />
-                me!"
-              </p>
-              <div className="testimonial-one__rating-and-date">
-                <div className="testimonial-one__rating">
-                  <span className="icon-star">
-                  </span>
-                  <span className="icon-star">
-                  </span>
-                  <span className="icon-star">
-                  </span>
-                  <span className="last-icon icon-star">
-                  </span>
-                  <span className="last-icon icon-star">
-                  </span>
-                </div>
-                <p className="testimonial-one__date">
-                  10 Days Ago
-                </p>
-              </div>
-            </div>
-          </li>
+        <ReactMarqueeList duration={58} listClassName="list-unstyled testimonial-one__list">
+          {TOP_TESTIMONIALS.map((item) => (
+            <li key={`top-${item.name}`}>
+              <TestimonialCard item={item} />
+            </li>
+          ))}
         </ReactMarqueeList>
-        <ReactMarqueeList duration={42} reverse listClassName="list-unstyled testimonial-one__list testimonial-one__list--two">
-          <li>
-            <div className="testimonial-one__single">
-              <div className="testimonial-one__quote-icon">
-                <img alt="" src="/legacy/assets/images/assets/images/icon/quote-icon-1.png" />
-              </div>
-              <div className="testimonial-one__client-info">
-                <div className="testimonial-one__client-content">
-                  <h4 className="testimonial-one__client-name">
-                    <a href="/legacy/pages/testimonials/index.html">
-                      Sarah
-                      Thompson
-                    </a>
-                  </h4>
-                  <p className="testimonial-one__client-sub-title">
-                    Marketing Manager
-                  </p>
-                </div>
-                <div className="testimonial-one__client-img">
-                  <img alt="" src="/legacy/assets/images/assets/images/testimonial/testimonial-1-5.jpg" />
-                </div>
-              </div>
-              <span className="testimonial-one__sub-title">
-                Spotless results every time!
-              </span>
-              <p className="testimonial-one__text">
-                "I’ve never seen my office look so clean and
-                <br />
-                organized.
-                Their team is punctual, professional, and
-                <br />
-                meticulous. Highly recommended!"
-              </p>
-              <div className="testimonial-one__rating-and-date">
-                <div className="testimonial-one__rating">
-                  <span className="icon-star">
-                  </span>
-                  <span className="icon-star">
-                  </span>
-                  <span className="icon-star">
-                  </span>
-                  <span className="last-icon icon-star">
-                  </span>
-                  <span className="last-icon icon-star">
-                  </span>
-                </div>
-                <p className="testimonial-one__date">
-                  10 Days Ago
-                </p>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div className="testimonial-one__single">
-              <div className="testimonial-one__quote-icon">
-                <img alt="" src="/legacy/assets/images/assets/images/icon/quote-icon-1.png" />
-              </div>
-              <div className="testimonial-one__client-info">
-                <div className="testimonial-one__client-content">
-                  <h4 className="testimonial-one__client-name">
-                    <a href="/legacy/pages/testimonials/index.html">
-                      Emily
-                      Carter
-                    </a>
-                  </h4>
-                  <p className="testimonial-one__client-sub-title">
-                    Business Owner
-                  </p>
-                </div>
-                <div className="testimonial-one__client-img">
-                  <img alt="" src="/legacy/assets/images/assets/images/testimonial/testimonial-1-6.jpg" />
-                </div>
-              </div>
-              <span className="testimonial-one__sub-title">
-                Worth every penny!
-              </span>
-              <p className="testimonial-one__text">
-                "Their attention to detail is unmatched. I’ve used
-                <br />
-                other
-                cleaning services before, but this one stands
-                <br />
-                out! I recommended tehm"
-              </p>
-              <div className="testimonial-one__rating-and-date">
-                <div className="testimonial-one__rating">
-                  <span className="icon-star">
-                  </span>
-                  <span className="icon-star">
-                  </span>
-                  <span className="icon-star">
-                  </span>
-                  <span className="last-icon icon-star">
-                  </span>
-                  <span className="last-icon icon-star">
-                  </span>
-                </div>
-                <p className="testimonial-one__date">
-                  10 Days Ago
-                </p>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div className="testimonial-one__single">
-              <div className="testimonial-one__quote-icon">
-                <img alt="" src="/legacy/assets/images/assets/images/icon/quote-icon-1.png" />
-              </div>
-              <div className="testimonial-one__client-info">
-                <div className="testimonial-one__client-content">
-                  <h4 className="testimonial-one__client-name">
-                    <a href="/legacy/pages/testimonials/index.html">
-                      Michael
-                      Brown
-                    </a>
-                  </h4>
-                  <p className="testimonial-one__client-sub-title">
-                    Financial Analyst
-                  </p>
-                </div>
-                <div className="testimonial-one__client-img">
-                  <img alt="" src="/legacy/assets/images/assets/images/testimonial/testimonial-1-7.jpg" />
-                </div>
-              </div>
-              <span className="testimonial-one__sub-title">
-                Efficient and reliable!
-              </span>
-              <p className="testimonial-one__text">
-                "I appreciate their consistent quality and flexibility.
-                <br />
-                They make sure my home always looks its best. We
-                <br />
-                are hope they will best in future"
-              </p>
-              <div className="testimonial-one__rating-and-date">
-                <div className="testimonial-one__rating">
-                  <span className="icon-star">
-                  </span>
-                  <span className="icon-star">
-                  </span>
-                  <span className="icon-star">
-                  </span>
-                  <span className="last-icon icon-star">
-                  </span>
-                  <span className="last-icon icon-star">
-                  </span>
-                </div>
-                <p className="testimonial-one__date">
-                  10 Days Ago
-                </p>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div className="testimonial-one__single">
-              <div className="testimonial-one__quote-icon">
-                <img alt="" src="/legacy/assets/images/assets/images/icon/quote-icon-1.png" />
-              </div>
-              <div className="testimonial-one__client-info">
-                <div className="testimonial-one__client-content">
-                  <h4 className="testimonial-one__client-name">
-                    <a href="/legacy/pages/testimonials/index.html">
-                      John
-                      Peterson
-                    </a>
-                  </h4>
-                  <p className="testimonial-one__client-sub-title">
-                    Financial Analyst
-                  </p>
-                </div>
-                <div className="testimonial-one__client-img">
-                  <img alt="" src="/legacy/assets/images/assets/images/testimonial/testimonial-1-8.jpg" />
-                </div>
-              </div>
-              <span className="testimonial-one__sub-title">
-                Efficient and reliable!
-              </span>
-              <p className="testimonial-one__text">
-                "I appreciate their consistent quality and flexibility.
-                <br />
-                They make sure my home always looks its best. We
-                <br />
-                are hope they will best in future"
-              </p>
-              <div className="testimonial-one__rating-and-date">
-                <div className="testimonial-one__rating">
-                  <span className="icon-star">
-                  </span>
-                  <span className="icon-star">
-                  </span>
-                  <span className="icon-star">
-                  </span>
-                  <span className="last-icon icon-star">
-                  </span>
-                  <span className="last-icon icon-star">
-                  </span>
-                </div>
-                <p className="testimonial-one__date">
-                  10 Days Ago
-                </p>
-              </div>
-            </div>
-          </li>
+        <ReactMarqueeList duration={58} reverse listClassName="list-unstyled testimonial-one__list testimonial-one__list--two">
+          {BOTTOM_TESTIMONIALS.map((item) => (
+            <li key={`bottom-${item.name}-${item.image}`}>
+              <TestimonialCard item={item} />
+            </li>
+          ))}
         </ReactMarqueeList>
       </div>
     </section>

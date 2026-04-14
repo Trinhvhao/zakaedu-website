@@ -28,17 +28,17 @@ export default function AboutSection({ onOpenVideo }) {
                 <div className="col-xl-4 col-lg-4 col-md-4">
                   <div className="about-one__left-img-box">
                     <div className="about-one__left-img-1">
-                      <img alt="" src="/legacy/assets/images/assets/images/resources/about-one-img-1.jpg" />
+                      <img alt="" src="/legacy/assets/images/resources/about-one-img-1.jpg" />
                     </div>
                     <div className="about-one__left-img-2">
-                      <img alt="" src="/legacy/assets/images/assets/images/resources/about-one-img-2.jpg" />
+                      <img alt="" src="/legacy/assets/images/resources/about-one-img-2.jpg" />
                     </div>
                   </div>
                 </div>
                 <div className="col-xl-8 col-lg-8 col-md-8">
                   <div className="about-one__left-img-box-2">
                     <div className="about-one__left-img-3">
-                      <img alt="" src="/legacy/assets/images/assets/images/resources/about-one-img-3.jpg" />
+                      <img alt="" src="/legacy/assets/images/resources/about-one-img-3.jpg" />
                       <div className="about-one__video-link">
                         <a className="video-popup" href={videoUrl} onClick={openVideo}>
                           <div className="about-one__video-icon">
@@ -60,7 +60,7 @@ export default function AboutSection({ onOpenVideo }) {
                 data-reveal-delay="300ms"
                 data-reveal-duration="1500ms"
               >
-              Freshflow
+              ZakaEdu
             </h2>
           </div>
           <div className="col-xl-6">
@@ -79,44 +79,44 @@ export default function AboutSection({ onOpenVideo }) {
                     </div>
                   </div>
                   <span className="section-title__tagline">
-                    About Us
+                    Về chúng tôi
                   </span>
                 </div>
                 <h2 className="section-title__title title-animation">
-                  Crafting Dreams, Guided by Purpose,
-                  Rooted in Creativity,
+                  Nuôi dưỡng sự tự tin cho học viên nhỏ tuổi
+                  bằng phương pháp hiện đại,{' '}
                   <span>
-                    &amp; Values That Define Our Journey
+                    giáo viên tận tâm và tiến bộ đo được
                   </span>
                 </h2>
               </div>
               <p className="about-one__text">
-                Driven by purpose and creativity, we craft dreams, stay rooted in
-                innovation, and uphold values that define our journey forward.
+                Chúng tôi xây dựng hành trình học tập tích cực,
+                giúp bé phát triển nghe, nói, đọc, viết từng bước.
               </p>
               <div className="about-one__client-box">
                 <div className="about-one__client-img-box">
                   <div className="about-one__client-img">
-                    <img alt="" src="/legacy/assets/images/assets/images/resources/about-one-client-img-1.jpg" />
+                    <img alt="" src="/legacy/assets/images/resources/about-one-client-img-1.jpg" />
                   </div>
                 </div>
                 <div className="about-one__client-content">
                   <h5 className="about-one__title">
-                    Inspiring Growth and Innovation
+                    Học vững vàng, tự tin mỗi ngày
                   </h5>
                   <p className="about-one__client-text">
-                    It’s an honor to stand before you today as we
-                    reflect on our journey and envision the path ahead.
+                    Mọi trẻ em đều có thể yêu tiếng Anh khi bài học
+                    sinh động, thực tế và đúng trình độ.
                   </p>
                   <p className="about-one__sub-title">
-                    Our Ceo{' '}
+                    Giám đốc trung tâm{' '}
                     <span>
                       Thomas Alison
                     </span>
                   </p>
                   <p className="about-one__client-text-2">
-                    Let’s continue to dream big, act boldly - Thank
-                    you.
+                    Chúng tôi cam kết giúp bé giao tiếp tiếng Anh
+                    tự nhiên và tự tin hơn mỗi ngày.
                   </p>
                 </div>
               </div>
@@ -128,7 +128,7 @@ export default function AboutSection({ onOpenVideo }) {
                       </span>
                     </div>
                     <p>
-                      Build trust through reliability
+                      Lộ trình học cá nhân hóa
                     </p>
                   </li>
                   <li>
@@ -137,7 +137,7 @@ export default function AboutSection({ onOpenVideo }) {
                       </span>
                     </div>
                     <p>
-                      Use eco-friendly cleaning solutions
+                      Hoạt động trò chơi tương tác
                     </p>
                   </li>
                   <li>
@@ -146,7 +146,7 @@ export default function AboutSection({ onOpenVideo }) {
                       </span>
                     </div>
                     <p>
-                      Ensure customer satisfaction
+                      Phản hồi tiến bộ hàng tuần
                     </p>
                   </li>
                 </ul>
@@ -157,7 +157,7 @@ export default function AboutSection({ onOpenVideo }) {
                       </span>
                     </div>
                     <p>
-                      Top-quality cleaning services
+                      Định hướng theo chuẩn quốc tế
                     </p>
                   </li>
                   <li>
@@ -166,7 +166,7 @@ export default function AboutSection({ onOpenVideo }) {
                       </span>
                     </div>
                     <p>
-                      Build trust through reliability
+                      Giáo viên kinh nghiệm, thân thiện
                     </p>
                   </li>
                   <li>
@@ -175,7 +175,7 @@ export default function AboutSection({ onOpenVideo }) {
                       </span>
                     </div>
                     <p>
-                      Create healthy, spotless spaces
+                      Môi trường học an toàn, truyền cảm hứng
                     </p>
                   </li>
                 </ul>
@@ -187,12 +187,12 @@ export default function AboutSection({ onOpenVideo }) {
                 </div>
                 <div className="content">
                   <h3>
-                    Our Mission &amp; Vision
+                    Sứ mệnh & Tầm nhìn
                   </h3>
                   <p>
-                    delivering exceptional cleaning services to
+                    mang đến giáo dục tiếng Anh hiệu quả,
                     <br />
-                    create spotless
+                    giúp mọi trẻ em phát triển toàn diện
                   </p>
                 </div>
               </div>

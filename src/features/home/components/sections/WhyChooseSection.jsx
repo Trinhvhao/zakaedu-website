@@ -12,10 +12,10 @@ export default function WhyChooseSection({ onOpenVideo }) {
   return (
     <>
     <section className="why-choose-one">
-      <div className="why-choose-one__bg-shape" style={{backgroundImage: 'url("/legacy/assets/images/assets/images/shapes/why-choose-one-shape-bg-shape.png")'}}>
+      <div className="why-choose-one__bg-shape" style={{backgroundImage: 'url("/legacy/assets/images/shapes/why-choose-one-shape-bg-shape.png")'}}>
       </div>
       <div className="why-choose-one__shape-2 float-bob-x">
-        <img alt="" src="/legacy/assets/images/assets/images/shapes/why-choose-one-shape-2.png" />
+        <img alt="" src="/legacy/assets/images/shapes/why-choose-one-shape-2.png" />
       </div>
       <div className="why-choose-one__big-title">
         <h3>
@@ -35,18 +35,18 @@ export default function WhyChooseSection({ onOpenVideo }) {
                     </div>
                   </div>
                   <span className="section-title__tagline">
-                    Why Choose Us
+                    Tại sao chọn chúng tôi
                   </span>
                 </div>
                 <h2 className="section-title__title title-animation">
-                  What Makes Us the Perfect Cleaning
-                  Partner?
+                  Vì sao phụ huynh
+                  chọn ZakaEdu?{' '}
                   <span>
-                    Your Clean
+                    Hành trình
                   </span>
                   <br />
                   <span>
-                    Space, Our Commitment!
+                    tiếng Anh của bé, cam kết của chúng tôi!
                   </span>
                 </h2>
               </div>
@@ -54,23 +54,23 @@ export default function WhyChooseSection({ onOpenVideo }) {
                 <div className="col-xl-6 col-lg-6 col-md-6">
                   <div className="why-choose-one__img-box-1">
                     <div className="why-choose-one__img-1">
-                      <img alt="" src="/legacy/assets/images/assets/images/resources/why-choose-one-img-1.jpg" />
+                      <img alt="" src="/legacy/assets/images/resources/why-choose-one-img-1.jpg" />
                     </div>
                     <div className="why-choose-one__shape-1 rotate-me">
-                      <img alt="" src="/legacy/assets/images/assets/images/shapes/why-choose-one-shape-1.png" />
+                      <img alt="" src="/legacy/assets/images/shapes/why-choose-one-shape-1.png" />
                     </div>
                     <div className="why-choose-one__round-text-box">
                       <div className="why-choose-one__round-text-box-inner">
-                        <CurvedTextRing className="why-choose-one__curved-circle" text="Cleaning * Moping * Dusting *" />
+                        <CurvedTextRing className="why-choose-one__curved-circle" text="Phát âm * Giao tiếp * Đọc hiểu *" />
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="col-xl-6 col-lg-6 col-md-6">
                   <div className="why-choose-one__img-box-2">
-                    <CurvedTextRing className="why-choose-one__curved-circle-2" text="Cleaning * Moping * Dusting *" reverse />
+                    <CurvedTextRing className="why-choose-one__curved-circle-2" text="Cambridge * Tự tin * Ứng dụng *" reverse />
                     <div className="why-choose-one__img-2">
-                      <img alt="" src="/legacy/assets/images/assets/images/resources/why-choose-one-img-2.jpg" />
+                      <img alt="" src="/legacy/assets/images/resources/why-choose-one-img-2.jpg" />
                     </div>
                     <div className="why-choose-one__video-link">
                       <a className="video-popup" href={videoUrl} onClick={openVideo}>
@@ -102,22 +102,22 @@ export default function WhyChooseSection({ onOpenVideo }) {
                     <ul className="why-choose-one__client-img-list list-unstyled">
                       <li>
                         <div className="why-choose-one__client-img">
-                          <img alt="" src="/legacy/assets/images/assets/images/resources/why-choose-one-client-img-1.jpg" />
+                          <img alt="" src="/legacy/assets/images/resources/why-choose-one-client-img-1.jpg" />
                         </div>
                       </li>
                       <li>
                         <div className="why-choose-one__client-img">
-                          <img alt="" src="/legacy/assets/images/assets/images/resources/why-choose-one-client-img-2.jpg" />
+                          <img alt="" src="/legacy/assets/images/resources/why-choose-one-client-img-2.jpg" />
                         </div>
                       </li>
                       <li>
                         <div className="why-choose-one__client-img">
-                          <img alt="" src="/legacy/assets/images/assets/images/resources/why-choose-one-client-img-3.jpg" />
+                          <img alt="" src="/legacy/assets/images/resources/why-choose-one-client-img-3.jpg" />
                         </div>
                       </li>
                       <li>
                         <div className="why-choose-one__client-img">
-                          <img alt="" src="/legacy/assets/images/assets/images/resources/why-choose-one-client-img-4.jpg" />
+                          <img alt="" src="/legacy/assets/images/resources/why-choose-one-client-img-4.jpg" />
                         </div>
                       </li>
                     </ul>
@@ -133,7 +133,7 @@ export default function WhyChooseSection({ onOpenVideo }) {
                         </span>
                       </div>
                       <p className="why-choose-one__ratting-text">
-                        4.5 Rating
+                        Đánh giá 5.0
                       </p>
                     </div>
                     <div className="why-choose-one__count-box-inner">
@@ -149,13 +149,13 @@ export default function WhyChooseSection({ onOpenVideo }) {
                         </span>
                       </div>
                       <p className="why-choose-one__count-text">
-                        Satisfied Review
+                        Lượt đánh giá tích cực
                       </p>
                     </div>
                   </div>
                 </div>
                 <div className="why-choose-one__client-arrow">
-                  <a aria-label="Learn more about Freshflow" href="/about">
+                  <a aria-label="Learn more about ZakaEdu" href="/about">
                     <span className="icon-diagonal-arrow">
                     </span>
                   </a>
@@ -174,13 +174,12 @@ export default function WhyChooseSection({ onOpenVideo }) {
                       </div>
                       <h3 className="why-choose-one__title">
                         <a href="/legacy/pages/team/index.html">
-                          Professional Team.
+                          Giao vien kinh nghiệm
                         </a>
                       </h3>
                       <p className="why-choose-one__text">
-                        Our experienced and trained cleaning
-                        experts
-                        ensure high-quality results every time.
+                        Đội ngũ có chuyên môn, hiểu tâm lý lứa tuổi
+                        và truyền động lực học tập.
                       </p>
                     </div>
                   </li>
@@ -196,13 +195,12 @@ export default function WhyChooseSection({ onOpenVideo }) {
                       </div>
                       <h3 className="why-choose-one__title">
                         <a href="/legacy/pages/about/index.html">
-                          Spotless Spaces
+                          Lộ trình cá nhân hóa
                         </a>
                       </h3>
                       <p className="why-choose-one__text">
-                        Our experienced and trained cleaning
-                        experts
-                        ensure high-quality results every time.
+                        Kiểm tra đầu vào và chia lớp đúng trình độ,
+                        giúp bé học đúng nhịp độ.
                       </p>
                     </div>
                   </li>
@@ -218,13 +216,12 @@ export default function WhyChooseSection({ onOpenVideo }) {
                       </div>
                       <h3 className="why-choose-one__title">
                         <a href="/legacy/pages/about/index.html">
-                          Eco-Friendly Products
+                          Phương pháp đã kiểm chứng
                         </a>
                       </h3>
                       <p className="why-choose-one__text">
-                        Our experienced and trained cleaning
-                        experts
-                        ensure high-quality results every time.
+                        Bài học giao tiếp và theo dự án giúp bé
+                        sử dụng tiếng Anh tự nhiên.
                       </p>
                     </div>
                   </li>
@@ -240,14 +237,12 @@ export default function WhyChooseSection({ onOpenVideo }) {
                       </div>
                       <h3 className="why-choose-one__title">
                         <a href="/legacy/pages/about/index.html">
-                          Flexible
-                          Scheduling
+                          Lịch học linh hoạt
                         </a>
                       </h3>
                       <p className="why-choose-one__text">
-                        Our experienced and trained cleaning
-                        experts
-                        ensure high-quality results every time.
+                        Lớp trong tuần và cuối tuần để phụ huynh
+                        dễ dàng chọn lớp cho bé.
                       </p>
                     </div>
                   </li>
@@ -260,11 +255,11 @@ export default function WhyChooseSection({ onOpenVideo }) {
                   </div>
                   <div className="why-choose-one__content">
                     <p>
-                      Sun - Fri &amp; 10:00 AM - 8:00 PM
+                      Thứ 2 - Chủ nhật & 8:00 - 21:00
                     </p>
                     <h4>
-                      <a href="tel:120045678910">
-                        12 (00) 456 78910
+                      <a href="tel:0354901750">
+                        0354 901 750
                       </a>
                     </h4>
                   </div>

@@ -2,10 +2,10 @@ export default function HomeFooter() {
   return (
     <>
     <footer className="site-footer">
-      <div className="site-footer__shape-bg float-bob-y" style={{backgroundImage: 'url("/legacy/assets/images/assets/images/shapes/site-footer-shpae-bg.png")'}}>
+      <div className="site-footer__shape-bg float-bob-y" style={{backgroundImage: 'url("/legacy/assets/images/shapes/site-footer-shpae-bg.png")'}}>
       </div>
       <div className="site-footer__shape-2 img-bounce">
-        <img alt="" src="/legacy/assets/images/assets/images/shapes/site-footer-shape-2.png" />
+        <img alt="" src="/legacy/assets/images/shapes/site-footer-shape-2.png" />
       </div>
       <div className="container">
         <div className="site-footer__inner">
@@ -16,13 +16,12 @@ export default function HomeFooter() {
                   <div className="site-footer__logo-box">
                     <div className="site-footer__logo">
                       <a href="/home">
-                        <img alt="" src="/legacy/assets/images/assets/images/resources/site-footer-logo-1.png" />
+                        <img alt="" src="/legacy/assets/images/resources/site-footer-logo-1.png" />
                       </a>
                     </div>
                     <p className="site-footer__text-1">
-                      We are passionate about delivering exceptional
-                      cleaning services to create spotless, comfortable spaces for homes and
-                      businesses.
+                      ZakaEdu helps children build confident English communication
+                      through joyful classes, clear roadmaps, and caring teachers.
                     </p>
                   </div>
                   <div className="site-footer__contact-info-box">
@@ -37,7 +36,7 @@ export default function HomeFooter() {
                             Address:
                           </p>
                           <h5>
-                            123 Maplewood Lane, YZ 56789. USA
+                            Toà V4, The Vesta
                           </h5>
                         </div>
                       </li>
@@ -53,8 +52,8 @@ export default function HomeFooter() {
                             Email Address:
                           </p>
                           <h5>
-                            <a href="mailto:info@domain.com">
-                              info@domain.com
+                            <a href="mailto:zakaedu.contact@gmail.com">
+                              zakaedu.contact@gmail.com
                             </a>
                           </h5>
                         </div>
@@ -69,8 +68,8 @@ export default function HomeFooter() {
                             Phone Number:
                           </p>
                           <h5>
-                            <a href="tel:9288006780">
-                              +92 ( 8800 ) - 6780
+                            <a href="tel:0354901750">
+                              0354 901 750
                             </a>
                           </h5>
                         </div>
@@ -106,7 +105,7 @@ export default function HomeFooter() {
                 <div className="site-footer__top-right">
                   <div className="site-footer__top-right-heading-box">
                     <div className="site-footer__shape-1 float-bob-x">
-                      <img alt="" src="/legacy/assets/images/assets/images/shapes/site-footer-shape-1.png" />
+                      <img alt="" src="/legacy/assets/images/shapes/site-footer-shape-1.png" />
                     </div>
                     <h3 className="site-footer__top-right-heading-title">
                       Collaborated with you to
@@ -114,23 +113,19 @@ export default function HomeFooter() {
                       find your valuable idea.
                     </h3>
                     <div className="site-footer__top-right-heading-img">
-                      <img alt="" src="/legacy/assets/images/assets/images/resources/site-footer-top-right-heading-img.png" />
+                      <img alt="" src="/legacy/assets/images/resources/site-footer-top-right-heading-img.png" />
                     </div>
                   </div>
                   <div className="site-footer__widget-box">
                     <div className="row">
                       <div className="col-xl-4 col-lg-4 col-md-4">
                         <div className="footer-widget__quick-links">
-                          <h4 className="footer-widget__title">
-                            Quick Links
-                          </h4>
+                          <h4 className="footer-widget__title">Truy cập nhanh</h4>
                           <ul className="footer-widget__quick-links-list list-unstyled">
                             <li>
                               <a href="/home">
                                 <span className="icon-next">
-                                </span>
-                                Home
-                              </a>
+                                </span>Trang chủ</a>
                             </li>
                             <li>
                               <a href="/about">
@@ -143,9 +138,7 @@ export default function HomeFooter() {
                             <li>
                               <a href="/contact">
                                 <span className="icon-next">
-                                </span>
-                                Contact
-                              </a>
+                                </span>Liên hệ</a>
                             </li>
                             <li>
                               <a href="/contact">
@@ -221,36 +214,35 @@ export default function HomeFooter() {
                               <a href="/services">
                                 <span className="icon-next">
                                 </span>
-                                Office Cleaning
+                                Starter English
                               </a>
                             </li>
                             <li>
                               <a href="/services">
                                 <span className="icon-next">
                                 </span>
-                                House
-                                Cleanings
+                                Speaking Club
                               </a>
                             </li>
                             <li>
                               <a href="/services">
                                 <span className="icon-next">
                                 </span>
-                                Store Moping
+                                Phonics &amp; Reading
                               </a>
                             </li>
                             <li>
                               <a href="/services">
                                 <span className="icon-next">
                                 </span>
-                                Organization
+                                Exam Preparation
                               </a>
                             </li>
                             <li>
                               <a href="/services">
                                 <span className="icon-next">
                                 </span>
-                                Room Sparkling
+                                Parent Progress Reports
                               </a>
                             </li>
                           </ul>
@@ -332,7 +324,7 @@ export default function HomeFooter() {
                   <p className="site-footer__bottom-text">
                     Copyright © 2025 by
                     <a href="https://themeforest.net/user/codearchives">
-                      Freshflow.
+                      ZakaEdu.
                     </a>
                     All
                     rights reserved.

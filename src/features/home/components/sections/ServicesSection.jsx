@@ -4,19 +4,19 @@ export default function ServicesSection() {
   return (
     <>
     <section className="services-one" id="services">
-      <div className="services-one__shape-bg" style={{backgroundImage: 'url("/legacy/assets/images/assets/images/shapes/services-one-shape-bg.png")'}}>
+      <div className="services-one__shape-bg" style={{backgroundImage: 'url("/legacy/assets/images/shapes/services-one-shape-bg.png")'}}>
       </div>
-      <div className="services-one__shape-bg-2" style={{backgroundImage: 'url("/legacy/assets/images/assets/images/shapes/services-one-shape-bg-2.png")'}}>
+      <div className="services-one__shape-bg-2" style={{backgroundImage: 'url("/legacy/assets/images/shapes/services-one-shape-bg-2.png")'}}>
       </div>
       <div className="services-one__shape-1">
       </div>
       <div className="services-one__shape-2">
       </div>
       <div className="services-one__shape-3 float-bob-x">
-        <img alt="" src="/legacy/assets/images/assets/images/shapes/services-one-shape-3.png" />
+        <img alt="" src="/legacy/assets/images/shapes/services-one-shape-3.png" />
       </div>
       <div className="services-one__shape-4 float-bob-y">
-        <img alt="" src="/legacy/assets/images/assets/images/shapes/services-one-shape-4.png" />
+        <img alt="" src="/legacy/assets/images/shapes/services-one-shape-4.png" />
       </div>
       <div className="container">
         <div className="services-one__top">
@@ -32,13 +32,13 @@ export default function ServicesSection() {
                       </div>
                     </div>
                     <span className="section-title__tagline">
-                      Services
+                      Chương trình
                     </span>
                   </div>
                   <h2 className="section-title__title title-animation">
-                    Sparkling Spaces, Happy Faces
+                    Bài học thông minh, bé tự tin{' '}
                     <span>
-                      Trịnh Hào Đẹp Traii
+                      Trung tâm tiếng Anh ZakaEdu
                     </span>
                   </h2>
                 </div>
@@ -47,12 +47,11 @@ export default function ServicesSection() {
             <div className="col-xl-6 col-lg-6">
               <div className="services-one__top-right">
                 <p className="services-one__top-text">
-                  We are passionate about delivering exceptional
+                  Chúng tôi cung cấp chương trình thực hành cho trẻ,
                   <br />
-                  cleaning services to create spotless, comfortable
+                  kết hợp luyện giao tiếp, phát âm,
                   <br />
-                  spaces for homes and
-                  businesses.
+                  và tư duy phản biện trong mỗi tiết học.
                 </p>
               </div>
             </div>
@@ -71,10 +70,10 @@ export default function ServicesSection() {
                   <div className="services-one__img-shape-1">
                   </div>
                   <div className="services-one__img">
-                    <img alt="" src="/legacy/assets/images/assets/images/services/services-one-img-1.jpg" />
+                    <img alt="" src="/legacy/assets/images/services/services-one-img-1.jpg" />
                   </div>
                   <div className="services-one__img-2">
-                    <img alt="" src="/legacy/assets/images/assets/images/services/services-one-img-2.jpg" />
+                    <img alt="" src="/legacy/assets/images/services/services-one-img-2.jpg" />
                   </div>
                   <div className="services-one__experience-box">
                     <div className="services-one__experience-icon">
@@ -87,11 +86,11 @@ export default function ServicesSection() {
                           <ReactCountUp end={25} />
                         </span>
                         <span>
-                          + Years
+                          + Năm
                         </span>
                         <br />
-                        of
-                        Work Experience
+                        kinh nghiệm
+                        đào tạo
                       </p>
                     </div>
                   </div>
@@ -100,7 +99,7 @@ export default function ServicesSection() {
             </div>
             <div className="col-xl-7">
               <div
-                className="services-one__left slideInLeft"
+                className="services-one__right slideInLeft"
                 data-reveal="true"
                 data-reveal-delay="100ms"
                 data-reveal-duration="2500ms"
@@ -114,14 +113,13 @@ export default function ServicesSection() {
                         <div className="services-one__content">
                           <h3 className="services-one__title">
                             <a href="/services">
-                              Residential Cleaning
+                              Starter English (6-8 tuổi)
                             </a>
                           </h3>
                           <p className="services-one__text">
-                            Inviting with our expert commercial
-                            cleaning
+                            Xây dựng từ vựng và phản xạ nói cơ bản
                             <br />
-                            solutions tailored to offices, retail spaces
+                            qua truyện, bài hát và trò chơi tương tác.
                           </p>
                         </div>
                       </div>
@@ -133,7 +131,7 @@ export default function ServicesSection() {
                       </div>
                     </div>
                     <div className="services-one__hover-img">
-                      <img alt="Image" src="/legacy/assets/images/assets/images/services/services-1-1.jpg" />
+                      <img alt="Image" src="/legacy/assets/images/services/services-1-1.jpg" />
                     </div>
                   </li>
                   <li>
@@ -144,14 +142,13 @@ export default function ServicesSection() {
                         <div className="services-one__content">
                           <h3 className="services-one__title">
                             <a href="/services">
-                              Commercial Cleaning
+                              Movers English (9-11 tuổi)
                             </a>
                           </h3>
                           <p className="services-one__text">
-                            Inviting with our expert commercial
-                            cleaning
+                            Tăng cường ngữ pháp và kỹ năng giao tiếp
                             <br />
-                            solutions tailored to offices, retail spaces
+                            bằng học theo dự án và đóng vai tình huống.
                           </p>
                         </div>
                       </div>
@@ -163,7 +160,7 @@ export default function ServicesSection() {
                       </div>
                     </div>
                     <div className="services-one__hover-img">
-                      <img alt="Image" src="/legacy/assets/images/assets/images/services/services-1-2.jpg" />
+                      <img alt="Image" src="/legacy/assets/images/services/services-1-2.jpg" />
                     </div>
                   </li>
                   <li>
@@ -174,15 +171,13 @@ export default function ServicesSection() {
                         <div className="services-one__content">
                           <h3 className="services-one__title">
                             <a href="/services">
-                              Deep
-                              Cleaning
+                              Flyers English (11-13 tuổi)
                             </a>
                           </h3>
                           <p className="services-one__text">
-                            Inviting with our expert commercial
-                            cleaning
+                            Cải thiện đọc, nghe và sự tự tin khi
                             <br />
-                            solutions tailored to offices, retail spaces
+                            nói trong lộ trình học và thi Cambridge.
                           </p>
                         </div>
                       </div>
@@ -194,7 +189,7 @@ export default function ServicesSection() {
                       </div>
                     </div>
                     <div className="services-one__hover-img">
-                      <img alt="Image" src="/legacy/assets/images/assets/images/services/services-1-3.jpg" />
+                      <img alt="Image" src="/legacy/assets/images/services/services-1-3.jpg" />
                     </div>
                   </li>
                   <li>
@@ -205,14 +200,13 @@ export default function ServicesSection() {
                         <div className="services-one__content">
                           <h3 className="services-one__title">
                             <a href="/services">
-                              Office Cleaning
+                              Speaking Club cuối tuần
                             </a>
                           </h3>
                           <p className="services-one__text">
-                            Inviting with our expert commercial
-                            cleaning
+                            Chủ đề giao tiếp thực tế, làm việc nhóm,
                             <br />
-                            solutions tailored to offices, retail spaces
+                            và rèn luyện sự tự tin cùng cố vấn.
                           </p>
                         </div>
                       </div>
@@ -224,7 +218,7 @@ export default function ServicesSection() {
                       </div>
                     </div>
                     <div className="services-one__hover-img">
-                      <img alt="Image" src="/legacy/assets/images/assets/images/services/services-1-4.jpg" />
+                      <img alt="Image" src="/legacy/assets/images/services/services-1-4.jpg" />
                     </div>
                   </li>
                   <li>
@@ -235,14 +229,13 @@ export default function ServicesSection() {
                         <div className="services-one__content">
                           <h3 className="services-one__title">
                             <a href="/services">
-                              Sanitizing &amp; Mopping
+                              Báo cáo tiến bộ cho phụ huynh
                             </a>
                           </h3>
                           <p className="services-one__text">
-                            Inviting with our expert commercial
-                            cleaning
+                            Báo cáo theo tháng cùng đề xuất
                             <br />
-                            solutions tailored to offices, retail spaces
+                            rõ ràng để phụ huynh đồng hành tại nhà.
                           </p>
                         </div>
                       </div>
@@ -254,7 +247,7 @@ export default function ServicesSection() {
                       </div>
                     </div>
                     <div className="services-one__hover-img">
-                      <img alt="Image" src="/legacy/assets/images/assets/images/services/services-1-5.jpg" />
+                      <img alt="Image" src="/legacy/assets/images/services/services-1-5.jpg" />
                     </div>
                   </li>
                 </ul>

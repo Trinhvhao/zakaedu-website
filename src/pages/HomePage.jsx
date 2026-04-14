@@ -6,15 +6,18 @@ import { useLegacyHomeRouteMap } from '../features/home/legacy/useLegacyHomeRout
 import { useLegacyHomeUiControls } from '../features/home/legacy/useLegacyHomeUiControls'
 
 export default function HomePage() {
-  useLegacyHomeAssets()
-  useHomeRevealAnimations()
-  useHomeTitleReveal()
-  useLegacyHomeUiControls()
-  useLegacyHomeRouteMap()
+  const assetsReady = useLegacyHomeAssets()
+  useHomeRevealAnimations(assetsReady)
+  useHomeTitleReveal(assetsReady)
+  useLegacyHomeUiControls(assetsReady)
+  useLegacyHomeRouteMap(assetsReady)
 
   return (
-    <main className="legacy-home-main legacy-home-page">
-      <LegacyHomeMarkup />
+    <main
+      className={`legacy-home-main legacy-home-page${assetsReady ? '' : ' legacy-home-main--loading'}`}
+      aria-busy={!assetsReady}
+    >
+      {assetsReady ? <LegacyHomeMarkup /> : null}
     </main>
   )
 }
