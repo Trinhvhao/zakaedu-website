@@ -1,4 +1,3 @@
-import CurvedTextRing from '../shared/CurvedTextRing'
 import ReactCountUp from '../shared/ReactCountUp'
 
 export default function WhyChooseSection({ onOpenVideo }) {
@@ -39,14 +38,10 @@ export default function WhyChooseSection({ onOpenVideo }) {
                   </span>
                 </div>
                 <h2 className="section-title__title title-animation">
-                  Vì sao phụ huynh
-                  chọn ZakaEdu?{' '}
-                  <span>
-                    Hành trình
-                  </span>
+                  Vì Sao Phụ Huynh Chọn ZakaEdu?
                   <br />
                   <span>
-                    tiếng Anh của bé, cam kết của chúng tôi!
+                    Hành Trình Tiếng Anh Của Bé, Cam Kết Của Chúng Tôi!
                   </span>
                 </h2>
               </div>
@@ -54,23 +49,17 @@ export default function WhyChooseSection({ onOpenVideo }) {
                 <div className="col-xl-6 col-lg-6 col-md-6">
                   <div className="why-choose-one__img-box-1">
                     <div className="why-choose-one__img-1">
-                      <img alt="" src="/legacy/assets/images/resources/why-choose-one-img-1.jpg" />
+                      <img alt="" src="/legacy/assets/images/resources/why-choose-one-img-1.png" />
                     </div>
                     <div className="why-choose-one__shape-1 rotate-me">
                       <img alt="" src="/legacy/assets/images/shapes/why-choose-one-shape-1.png" />
-                    </div>
-                    <div className="why-choose-one__round-text-box">
-                      <div className="why-choose-one__round-text-box-inner">
-                        <CurvedTextRing className="why-choose-one__curved-circle" text="Phát âm * Giao tiếp * Đọc hiểu *" />
-                      </div>
                     </div>
                   </div>
                 </div>
                 <div className="col-xl-6 col-lg-6 col-md-6">
                   <div className="why-choose-one__img-box-2">
-                    <CurvedTextRing className="why-choose-one__curved-circle-2" text="Cambridge * Tự tin * Ứng dụng *" reverse />
                     <div className="why-choose-one__img-2">
-                      <img alt="" src="/legacy/assets/images/resources/why-choose-one-img-2.jpg" />
+                      <img alt="" src="/legacy/assets/images/resources/why-choose-one-img-2.png" />
                     </div>
                     <div className="why-choose-one__video-link">
                       <a className="video-popup" href={videoUrl} onClick={openVideo}>
@@ -174,7 +163,7 @@ export default function WhyChooseSection({ onOpenVideo }) {
                       </div>
                       <h3 className="why-choose-one__title">
                         <a href="/legacy/pages/team/index.html">
-                          Giao vien kinh nghiệm
+                          Giáo viên kinh nghiệm
                         </a>
                       </h3>
                       <p className="why-choose-one__text">

@@ -59,17 +59,17 @@ export default function BannerSection() {
                 <ul className="list-unstyled banner-one__satisfied-partner-list">
                   <li>
                     <div className="banner-one__satisfied-partner-img">
-                      <img alt="" src="/legacy/assets/images/resources/banner-one-satisfied-partner-1-1.jpg" />
+                      <img alt="" src="/legacy/assets/images/resources/banner-one-satisfied-partner-1-1.png" />
                     </div>
                   </li>
                   <li>
                     <div className="banner-one__satisfied-partner-img">
-                      <img alt="" src="/legacy/assets/images/resources/banner-one-satisfied-partner-1-2.jpg" />
+                      <img alt="" src="/legacy/assets/images/resources/banner-one-satisfied-partner-1-2.png" />
                     </div>
                   </li>
                   <li>
                     <div className="banner-one__satisfied-partner-img">
-                      <img alt="" src="/legacy/assets/images/resources/banner-one-satisfied-partner-1-3.jpg" />
+                      <img alt="" src="/legacy/assets/images/resources/banner-one-satisfied-partner-1-3.png" />
                     </div>
                   </li>
                 </ul>
@@ -98,7 +98,7 @@ export default function BannerSection() {
                   data-reveal-delay="100ms"
                   data-reveal-duration="2500ms"
                 >
-                  <img alt="" src="/legacy/assets/images/resources/banner-one-img-1.png" />
+                  <img alt="" src="/legacy/assets/images/resources/banner-one-img-1.svg" />
                 </div>
                 <div className="banner-one__google-rating">
                   <div className="banner-one__google-rating-img">
@@ -110,13 +110,19 @@ export default function BannerSection() {
                       </span>
                       <span className="icon-star">
                       </span>
+                      <span className="icon-star">
+                      </span>
+                      <span className="icon-star">
+                      </span>
+                      <span className="icon-star">
+                      </span>
                     </div>
                     <div className="banner-one__google-rating-count">
                       <p className="count-text">
-                        <ReactCountUp end={12} />
+                        <ReactCountUp end={2} />
                       </p>
                       <span>
-                        k Đánh giá
+                        k lượt đánh giá
                       </span>
                     </div>
                   </div>

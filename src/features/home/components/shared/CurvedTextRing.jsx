@@ -1,20 +1,29 @@
 import { useId } from 'react'
 
-export default function CurvedTextRing({ text, className = '', reverse = false, radius = 76 }) {
+export default function CurvedTextRing({ text, className = '', arc = 'top' }) {
   const rawId = useId()
   const pathId = `curved-text-${rawId.replace(/[:]/g, '')}`
-  const viewBoxSize = radius * 2 + 24
-  const center = viewBoxSize / 2
-  const path = `M ${center},${center} m -${radius},0 a ${radius},${radius} 0 1,1 ${radius * 2},0 a ${radius},${radius} 0 1,1 -${radius * 2},0`
+
+  const viewBoxWidth = 260
+  const viewBoxHeight = 90
+  const paddingX = 10
+  const paddingY = 10
+  const startX = paddingX
+  const endX = viewBoxWidth - paddingX
+  const radiusX = (endX - startX) / 2
+  const radiusY = viewBoxHeight / 2 - paddingY
+  const baselineY = arc === 'bottom' ? paddingY : viewBoxHeight - paddingY
+  const sweepFlag = arc === 'bottom' ? 1 : 0
+  const path = `M ${startX},${baselineY} A ${radiusX},${radiusY} 0 0 ${sweepFlag} ${endX},${baselineY}`
 
   return (
     <div className={className} aria-hidden="true">
-      <svg className={`react-curved-text ${reverse ? 'is-reverse' : ''}`} viewBox={`0 0 ${viewBoxSize} ${viewBoxSize}`}>
+      <svg className="react-curved-text" viewBox={`0 0 ${viewBoxWidth} ${viewBoxHeight}`}>
         <defs>
           <path d={path} id={pathId} />
         </defs>
         <text>
-          <textPath href={`#${pathId}`} startOffset={reverse ? '100%' : '0%'} textAnchor={reverse ? 'end' : 'start'}>
+          <textPath href={`#${pathId}`} startOffset="50%" textAnchor="middle">
             {text}
           </textPath>
         </text>

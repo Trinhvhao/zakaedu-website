@@ -237,29 +237,12 @@ export default function HomeHeader() {
                 </ul>
               </div>
               <div className="main-menu__right">
-                <div className="main-menu__search-cart-box">
-                  <div className="main-menu__search-box">
-                    <button
-                      aria-label="Open search"
-                      className="main-menu__search searcher-toggler-box icon-search"
-                      type="button"
-                    >
-                    </button>
-                  </div>
-                  <div className="main-menu__cart">
-                    <a aria-label="Open cart" href="/cart">
-                      <span className="fas fa-shopping-cart">
-                      </span>
-                    </a>
-                  </div>
-                </div>
                 <div className="main-menu__btn-box">
                   <div className="main-menu__btn">
                     <a href="/contact">
                       <span className="icon-customer-support">
                       </span>
-                        Enroll
-                        Today
+                        Liên hệ ngay
                     </a>
                   </div>
                 </div>

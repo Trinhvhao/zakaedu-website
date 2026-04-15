@@ -70,10 +70,10 @@ export default function ServicesSection() {
                   <div className="services-one__img-shape-1">
                   </div>
                   <div className="services-one__img">
-                    <img alt="" src="/legacy/assets/images/services/services-one-img-1.jpg" />
+                    <img alt="" src="/legacy/assets/images/services/services-one-img-1.png" />
                   </div>
                   <div className="services-one__img-2">
-                    <img alt="" src="/legacy/assets/images/services/services-one-img-2.jpg" />
+                    <img alt="" src="/legacy/assets/images/services/services-one-img-2.png" />
                   </div>
                   <div className="services-one__experience-box">
                     <div className="services-one__experience-icon">
@@ -131,7 +131,7 @@ export default function ServicesSection() {
                       </div>
                     </div>
                     <div className="services-one__hover-img">
-                      <img alt="Image" src="/legacy/assets/images/services/services-1-1.jpg" />
+                      <img alt="Image" src="/legacy/assets/images/services/services-1-1.png" />
                     </div>
                   </li>
                   <li>
@@ -160,7 +160,7 @@ export default function ServicesSection() {
                       </div>
                     </div>
                     <div className="services-one__hover-img">
-                      <img alt="Image" src="/legacy/assets/images/services/services-1-2.jpg" />
+                      <img alt="Image" src="/legacy/assets/images/services/services-1-2.png" />
                     </div>
                   </li>
                   <li>
@@ -189,7 +189,7 @@ export default function ServicesSection() {
                       </div>
                     </div>
                     <div className="services-one__hover-img">
-                      <img alt="Image" src="/legacy/assets/images/services/services-1-3.jpg" />
+                      <img alt="Image" src="/legacy/assets/images/services/services-1-3.png" />
                     </div>
                   </li>
                   <li>
@@ -218,7 +218,7 @@ export default function ServicesSection() {
                       </div>
                     </div>
                     <div className="services-one__hover-img">
-                      <img alt="Image" src="/legacy/assets/images/services/services-1-4.jpg" />
+                      <img alt="Image" src="/legacy/assets/images/services/services-1-4.png" />
                     </div>
                   </li>
                   <li>
@@ -247,7 +247,7 @@ export default function ServicesSection() {
                       </div>
                     </div>
                     <div className="services-one__hover-img">
-                      <img alt="Image" src="/legacy/assets/images/services/services-1-5.jpg" />
+                      <img alt="Image" src="/legacy/assets/images/services/services-1-5.png" />
                     </div>
                   </li>
                 </ul>

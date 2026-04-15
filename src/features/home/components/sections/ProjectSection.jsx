@@ -14,52 +14,52 @@ const PROJECT_ITEMS = [
   {
     type: 'project',
     key: 'project-1',
-    image: '/legacy/assets/images/project/project-1-1.jpg',
-    tag: 'Lớp nhập môn',
-    date: 'Tháng 11/24',
-    title: 'Khởi động phát âm cho học viên mới',
-    categories: ['house', 'sparklyclean', 'bakery'],
+    image: '/legacy/assets/images/project/project-1-1.png',
+    tag: 'Luyện thi',
+    date: 'Liên tục',
+    title: 'Luyện thi TOEIC & IELTS',
+    categories: ['corporate', 'bakery'],
   },
   {
     type: 'project',
     key: 'project-2',
-    image: '/legacy/assets/images/project/project-1-2.jpg',
-    tag: 'Cambridge',
-    date: 'Tháng 11/24',
-    title: 'Lộ trình Starters cho học viên nhỏ',
+    image: '/legacy/assets/images/project/project-1-2.png',
+    tag: 'Lộ trình',
+    date: 'Liên tục',
+    title: 'Luyện ôn thi các cấp Cambridge (Starters, Movers, Flyers)',
     categories: ['corporate', 'bakery'],
   },
   {
     type: 'project',
     key: 'project-3',
-    image: '/legacy/assets/images/project/project-1-3.jpg',
-    tag: 'CLB giao tiếp',
-    date: 'Tháng 11/24',
-    title: 'Thử thách giao tiếp cuối tuần',
-    categories: ['cargarage', 'house', 'bakery'],
+    image: '/legacy/assets/images/project/project-1-3.png',
+    tag: 'Cá nhân',
+    date: 'Liên tục',
+    title: 'Lộ trình cá nhân hóa cho trẻ',
+    categories: ['house', 'sparklyclean', 'bakery'],
   },
   {
     type: 'project',
     key: 'project-4',
-    image: '/legacy/assets/images/project/project-1-4.jpg',
-    tag: 'Lộ trình đọc',
-    date: 'Tháng 11/24',
-    title: 'Phát triển đọc hiểu qua truyện kể',
-    categories: ['corporate', 'cargarage', 'sparklyclean'],
+    image: '/legacy/assets/images/project/project-1-4.png',
+    tag: 'Nâng cao',
+    date: 'Liên tục',
+    title: 'Khóa nâng cao kỹ năng giao tiếp',
+    categories: ['house', 'sparklyclean', 'bakery'],
   },
   {
     type: 'project',
     key: 'project-5',
-    image: '/legacy/assets/images/project/project-1-5.jpg',
-    tag: 'Đồng hành gia đình',
-    date: 'Tháng 11/24',
-    title: 'Hướng dẫn luyện tập tại nhà cho phụ huynh',
+    image: '/legacy/assets/images/project/project-1-5.png',
+    tag: 'Gia sư',
+    date: 'Liên tục',
+    title: 'Gia sư tại nhà',
     categories: ['corporate', 'bakery', 'house'],
   },
   {
     type: 'cta',
     key: 'project-cta',
-    image: '/legacy/assets/images/project/project-one-single-two-img-1.png',
+    image: '/legacy/assets/images/resources/banner-one-img-1.svg',
     categories: ['sparklyclean', 'house', 'bakery'],
   },
 ]
@@ -98,15 +98,13 @@ export default function ProjectSection() {
                 <div className="section-title__tagline-shape" />
                 <div className="section-title__tagline-shape-2" />
               </div>
-              <span className="section-title__tagline">Dự án học tập</span>
+              <span className="section-title__tagline">Các khóa học tại ZakaEdu</span>
             </div>
             <h2 className="section-title__title title-animation">
-              Tổng hợp các hành trình học tập{' '}
-              <span>giúp</span>
+              Khám Phá
               <br />
               <span>
-                học viên
-                tiến bộ bền vững
+                Các Khóa Học Tại ZakaEdu
               </span>
             </h2>
           </div>
@@ -136,9 +134,7 @@ export default function ProjectSection() {
                         </div>
                         <h3 className="project-one__title-2">
                           <a href="/legacy/pages/project-details/index.html">
-                            Bạn đang tìm lộ trình tiếng Anh
-                            <br />
-                            phù hợp cho bé?
+                            Bạn đang tìm lộ trình tiếng Anh phù hợp cho bé?
                           </a>
                         </h3>
                         <div className="project-one__view-box-2">
@@ -148,9 +144,9 @@ export default function ProjectSection() {
                           >
                             <i className="icon-diagonal-arrow" />
                             <span>
-                              Xem them
+                              Xem thêm
                               <br />
-                              chuong trinh
+                              chương trình
                             </span>
                           </a>
                         </div>

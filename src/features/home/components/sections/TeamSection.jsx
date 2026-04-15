@@ -1,3 +1,5 @@
+import { useRef } from 'react'
+
 const TEAM_MEMBERS = [
   {
     name: 'Emily Carter',
@@ -27,6 +29,36 @@ const TEAM_MEMBERS = [
 ]
 
 export default function TeamSection() {
+  const trackRef = useRef(null)
+
+  const slideTeamCards = (direction) => {
+    const track = trackRef.current
+
+    if (!track) return
+
+    const maxScrollLeft = track.scrollWidth - track.clientWidth
+
+    if (direction < 0 && track.scrollLeft <= 4) {
+      track.scrollTo({ left: maxScrollLeft, behavior: 'smooth' })
+      return
+    }
+
+    if (direction > 0 && track.scrollLeft >= maxScrollLeft - 4) {
+      track.scrollTo({ left: 0, behavior: 'smooth' })
+      return
+    }
+
+    const firstItem = track.querySelector('.item')
+    const cardWidth = firstItem ? firstItem.getBoundingClientRect().width : track.clientWidth * 0.85
+    const computedStyles = window.getComputedStyle(track)
+    const gap = parseFloat(computedStyles.columnGap || computedStyles.gap || '0')
+
+    track.scrollBy({
+      left: direction * (cardWidth + gap),
+      behavior: 'smooth',
+    })
+  }
+
   return (
     <>
       <section className="team-one" id="team">
@@ -39,25 +71,45 @@ export default function TeamSection() {
         <div className="team-one__shape-3" />
         <div className="team-one__shape-4" />
         <div className="container">
-          <div className="section-title text-left sec-title-animation animation-style2">
-            <div className="section-title__tagline-box">
-              <div className="section-title__tagline-shape-box">
-                <div className="section-title__tagline-shape" />
-                <div className="section-title__tagline-shape-2" />
+          <div className="team-slider-react__header">
+            <div className="section-title text-left sec-title-animation animation-style2">
+              <div className="section-title__tagline-box">
+                <div className="section-title__tagline-shape-box">
+                  <div className="section-title__tagline-shape" />
+                  <div className="section-title__tagline-shape-2" />
+                </div>
+                <span className="section-title__tagline">Đội ngũ giảng dạy</span>
               </div>
-              <span className="section-title__tagline">Đội ngũ giảng dạy</span>
+              <h2 className="section-title__title title-animation">
+                Gặp gỡ đội ngũ thầy cô tận tâm
+                <br />
+                đồng hành cùng bé tại
+                <br />
+                <span>trung tâm ZakaEdu</span>
+              </h2>
             </div>
-            <h2 className="section-title__title title-animation">
-              Gặp gỡ những người thầy đồng hành
-              <br />
-              mọi cột mốc tiến bộ của bé.{' '}
-              <span>Đội ngũ tận tâm tại</span>
-              <br />
-              <span>trung tâm ZakaEdu</span>
-            </h2>
+
+            <div className="team-slider-react__controls" aria-label="Điều hướng danh sách giảng viên">
+              <button
+                aria-label="Xem giảng viên trước"
+                className="team-slider-react__btn team-slider-react__btn--prev"
+                onClick={() => slideTeamCards(-1)}
+                type="button"
+              >
+                <span className="icon-right-arrow" />
+              </button>
+              <button
+                aria-label="Xem giảng viên tiếp theo"
+                className="team-slider-react__btn team-slider-react__btn--next"
+                onClick={() => slideTeamCards(1)}
+                type="button"
+              >
+                <span className="icon-right-arrow" />
+              </button>
+            </div>
           </div>
 
-          <div className="team-grid-react">
+          <div className="team-grid-react team-slider-react__track" ref={trackRef}>
             {TEAM_MEMBERS.map((member) => (
               <div key={member.name} className="item">
                 <div className="team-one__single">

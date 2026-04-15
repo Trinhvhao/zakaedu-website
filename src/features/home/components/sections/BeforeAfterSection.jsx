@@ -22,8 +22,8 @@ export default function TrướcAfterSection() {
               <div className="before-and-after__img-box">
                 <div className="before-after">
                     <ImageCompareSlider
-                      beforeSrc="/legacy/assets/images/resources/before-and-after-img.jpg"
-                      afterSrc="/legacy/assets/images/resources/before-and-after-img-2.jpg"
+                      beforeSrc="/legacy/assets/images/resources/before-and-after-img.png"
+                      afterSrc="/legacy/assets/images/resources/before-and-after-img-2.png"
                       alt="Trước and after student learning progress"
                     />
                 </div>

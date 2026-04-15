@@ -28,17 +28,17 @@ export default function AboutSection({ onOpenVideo }) {
                 <div className="col-xl-4 col-lg-4 col-md-4">
                   <div className="about-one__left-img-box">
                     <div className="about-one__left-img-1">
-                      <img alt="" src="/legacy/assets/images/resources/about-one-img-1.jpg" />
+                      <img alt="" src="/legacy/assets/images/resources/about-one-img-1.png" />
                     </div>
                     <div className="about-one__left-img-2">
-                      <img alt="" src="/legacy/assets/images/resources/about-one-img-2.jpg" />
+                      <img alt="" src="/legacy/assets/images/resources/about-one-img-2.png" />
                     </div>
                   </div>
                 </div>
                 <div className="col-xl-8 col-lg-8 col-md-8">
-                  <div className="about-one__left-img-box-2">
-                    <div className="about-one__left-img-3">
-                      <img alt="" src="/legacy/assets/images/resources/about-one-img-3.jpg" />
+                    <div className="about-one__left-img-box-2">
+                      <div className="about-one__left-img-3 about-one__left-img-3--heart">
+                      <img alt="" src="/legacy/assets/images/resources/about-one-img-3.png" />
                       <div className="about-one__video-link">
                         <a className="video-popup" href={videoUrl} onClick={openVideo}>
                           <div className="about-one__video-icon">
@@ -92,12 +92,12 @@ export default function AboutSection({ onOpenVideo }) {
               </div>
               <p className="about-one__text">
                 Chúng tôi xây dựng hành trình học tập tích cực,
-                giúp bé phát triển nghe, nói, đọc, viết từng bước.
+                giúp bé phát triển toàn diện.
               </p>
               <div className="about-one__client-box">
                 <div className="about-one__client-img-box">
                   <div className="about-one__client-img">
-                    <img alt="" src="/legacy/assets/images/resources/about-one-client-img-1.jpg" />
+                    <img alt="" src="/legacy/assets/images/resources/about-one-client-img-1.png" />
                   </div>
                 </div>
                 <div className="about-one__client-content">
@@ -111,7 +111,7 @@ export default function AboutSection({ onOpenVideo }) {
                   <p className="about-one__sub-title">
                     Giám đốc trung tâm{' '}
                     <span>
-                      Thomas Alison
+                      Trang Trần
                     </span>
                   </p>
                   <p className="about-one__client-text-2">
