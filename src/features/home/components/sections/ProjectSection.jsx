@@ -59,7 +59,7 @@ const PROJECT_ITEMS = [
   {
     type: 'cta',
     key: 'project-cta',
-    image: '/legacy/assets/images/resources/banner-one-img-1.svg',
+    image: '/legacy/assets/images/resources/banner-one-img-1.png',
     categories: ['sparklyclean', 'house', 'bakery'],
   },
 ]

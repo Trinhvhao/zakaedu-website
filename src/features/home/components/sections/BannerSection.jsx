@@ -98,7 +98,7 @@ export default function BannerSection() {
                   data-reveal-delay="100ms"
                   data-reveal-duration="2500ms"
                 >
-                  <img alt="" src="/legacy/assets/images/resources/banner-one-img-1.svg" />
+                  <img alt="" src="/legacy/assets/images/resources/banner-one-img-1.png" />
                 </div>
                 <div className="banner-one__google-rating">
                   <div className="banner-one__google-rating-img">
