@@ -12,6 +12,9 @@ export default function ImageCompareSlider({ beforeSrc, afterSrc, alt = '' }) {
       <img className="react-compare-after" src={afterSrc} alt={alt} />
       <img className="react-compare-before" src={beforeSrc} alt={alt} />
       <div className="react-compare-divider" aria-hidden="true" />
+      <div className="react-compare-handle" aria-hidden="true">
+        <span className="react-compare-handle-icon">↔</span>
+      </div>
       <input
         className="react-compare-range"
         type="range"

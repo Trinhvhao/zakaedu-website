@@ -2,29 +2,34 @@ import { useRef } from 'react'
 
 const TEAM_MEMBERS = [
   {
-    name: 'Emily Carter',
-    role: 'Giám đốc học vụ',
-    image: '/legacy/assets/images/team/team-1-1.jpg',
+    name: 'Cô Trang Trần',
+    role: 'Giám đốc trung tâm',
+    image: '/legacy/assets/images/team/team-1-1.png',
   },
   {
-    name: 'Michael Bennett',
-    role: 'Giáo viên tiếng Anh cao cấp',
-    image: '/legacy/assets/images/team/team-1-2.jpg',
+    name: 'Thầy Quốc Khánh',
+    role: 'Giáo viên Tiếng Anh',
+    image: '/legacy/assets/images/team/team-1-2.png',
   },
   {
-    name: 'Sophia Ramirez',
-    role: 'Chuyên gia phát âm',
-    image: '/legacy/assets/images/team/team-1-3.jpg',
+    name: 'Cô Hải Yến',
+    role: 'Giáo viên Tiếng Anh',
+    image: '/legacy/assets/images/team/team-1-3.png',
   },
   {
-    name: 'Ethan Collins',
-    role: 'Cố vấn CLB giao tiếp',
-    image: '/legacy/assets/images/team/team-1-4.jpg',
+    name: 'Cô Khánh Linh',
+    role: 'Giáo viên Ngữ Văn',
+    image: '/legacy/assets/images/team/team-1-4.png',
   },
   {
-    name: 'Ava Thompson',
-    role: 'Chuyên viên đồng hành phụ huynh',
-    image: '/legacy/assets/images/team/team-1-2.jpg',
+    name: 'Thầy Andrew',
+    role: 'Giáo viên Nước Ngoài',
+    image: '/legacy/assets/images/team/team-1-5.png',
+  },
+  {
+    name: 'Thầy Cương',
+    role: 'Giáo viên Toán',
+    image: '/legacy/assets/images/team/team-1-6.png',
   },
 ]
 

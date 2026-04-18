@@ -63,12 +63,12 @@ export default function OfficeLocationSection() {
                         </div>
                         <div className="office-location__popup-content">
                           <p>
-                            Toà V4,
+                            Cs1: Toà V4, The Vesta,
                             <br />
-                            The Vesta
+                            Hà Đông, Hà Nội
                           </p>
                           <span>
-                            Trung tâm tiếng Anh thiếu nhi
+                            Cơ sở trung tâm giáo dục
                           </span>
                         </div>
                       </div>
@@ -88,12 +88,12 @@ export default function OfficeLocationSection() {
                         </div>
                         <div className="office-location__popup-content">
                           <p>
-                            Toà V4,
+                            Cs2: Kiot 60, HH02 2A KDT Thanh Hà,
                             <br />
-                            The Vesta
+                            Xã Bình Minh, Hà Nội
                           </p>
                           <span>
-                            Trung tâm tiếng Anh thiếu nhi
+                            Cơ sở tư vấn và kiểm tra đầu vào
                           </span>
                         </div>
                       </div>
@@ -113,12 +113,12 @@ export default function OfficeLocationSection() {
                         </div>
                         <div className="office-location__popup-content">
                           <p>
-                            Toà V4,
+                            Cs3: Toà V1, The Vesta,
                             <br />
-                            The Vesta
+                            Hà Đông, Hà Nội
                           </p>
                           <span>
-                            Trung tâm tiếng Anh thiếu nhi
+                            Cơ sở trung tâm giáo dục
                           </span>
                         </div>
                       </div>
@@ -138,37 +138,12 @@ export default function OfficeLocationSection() {
                         </div>
                         <div className="office-location__popup-content">
                           <p>
-                            Toà V4,
+                            Cs4: DV22-LK964, Hàng Bè,
                             <br />
-                            The Vesta
+                            Kiến Hưng, Hà Đông, Hà Nội
                           </p>
                           <span>
-                            Trung tâm tiếng Anh thiếu nhi
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="office-location__point-1 office-location__point-5">
-                  <div className="office-location__markar office-location__markar-5">
-                    <i className="ripple">
-                    </i>
-                  </div>
-                  <div className="office-location__popup-box">
-                    <div className="office-location__popup">
-                      <div className="office-location__popup-inner">
-                        <div className="office-location__popup-img">
-                          <img alt="" src="/legacy/assets/images/resources/office-location-popup-img-5.jpg" />
-                        </div>
-                        <div className="office-location__popup-content">
-                          <p>
-                            Toà V4,
-                            <br />
-                            The Vesta
-                          </p>
-                          <span>
-                            Trung tâm tiếng Anh thiếu nhi
+                            Cơ sở tư vấn và kiểm tra đầu vào
                           </span>
                         </div>
                       </div>

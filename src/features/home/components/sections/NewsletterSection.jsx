@@ -19,7 +19,7 @@ export default function NewsletterSection() {
                   Đăng ký
                 </h2>
                 <p className="newsletter-one__sub-title">
-                  Bản tin phụ huynh
+                  Mẹo & Tài liệu
                 </p>
               </div>
             </div>
@@ -28,17 +28,17 @@ export default function NewsletterSection() {
                 <div className="newsletter-one__img-shape">
                   <div className="newsletter-one__img-box-1">
                     <div className="newsletter-one__img-1">
-                      <img alt="" src="/legacy/assets/images/resources/newsletter-one-img-1-1.jpg" />
+                      <img alt="" src="/legacy/assets/images/resources/why-choose-one-img-2.png" style={{ objectFit: 'cover', height: '175px' }} />
                     </div>
                   </div>
                   <div className="newsletter-one__img-box-2">
                     <div className="newsletter-one__img-2">
-                      <img alt="" src="/legacy/assets/images/resources/newsletter-one-img-1-2.jpg" />
+                      <img alt="" src="https://th.bing.com/th/id/R.e29340150cae488ffa0da9ba6df02b22?rik=dTnlttHh%2bx%2bg2Q&pid=ImgRaw&r=0" style={{ objectFit: 'cover', height: '107px' }} />
                     </div>
                   </div>
                   <div className="newsletter-one__img-box-3">
                     <div className="newsletter-one__img-3">
-                      <img alt="" src="/legacy/assets/images/resources/newsletter-one-img-1-3.jpg" />
+                      <img alt="" src="https://static3.sachtruyen.com.vn/images/bo-english-grammar-for-kids-ngu-phap-tieng-anh-tieu-hoc-tap-2-co-dap-an-tai-ban-2025-1.jpg" style={{ objectFit: 'cover', height: '107px' }} />
                     </div>
                   </div>
                 </div>
@@ -56,17 +56,7 @@ export default function NewsletterSection() {
                     </span>
                   </button>
                 </form>
-                <p className="newsletter-one__form-text">
-                  Khi đăng ký, bạn đồng ý với
-                  <a href="/about">
-                    Điều khoản
-                    sử dụng
-                  </a>
-                  &amp;
-                  <a href="/about">
-                    Chính sách bảo mật
-                  </a>
-                </p>
+          
               </div>
             </div>
           </div>

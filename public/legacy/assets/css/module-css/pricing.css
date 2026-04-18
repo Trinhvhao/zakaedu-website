@@ -67,15 +67,15 @@
 .pricing-one__tab-buttons-box {
     position: relative;
     display: block;
-    max-width: 265px;
-    width: 100%;
+    width: fit-content;
+    max-width: calc(100% - 24px);
     margin: 0 auto 50px;
 }
 
 .pricing-one__discount-box {
     position: absolute;
     top: -58px;
-    right: -30px;
+    right: -12px;
     background-color: var(--Freshflow-extra);
     padding: 8px 12px 8px;
     border-radius: 14px;
@@ -92,7 +92,7 @@
 .pricing-one__discount-shape-1 {
     position: absolute;
     top: -40px;
-    right: 55px;
+    right: 72px;
 }
 
 .pricing-one__discount-shape-1 img {
@@ -104,8 +104,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: fit-content;
+    max-width: 100%;
     border-radius: 40px;
-    width: 265px;
     background-color: var(--Freshflow-white);
     border: 2px solid #F1F1F2;
     margin: 0 auto 0;
@@ -129,7 +130,7 @@
     line-height: 16px;
     color: var(--Freshflow-gray);
     background-color: transparent;
-    padding: 14px 17px 14px;
+    padding: 12px 14px 12px;
     font-weight: 600;
     cursor: pointer;
     overflow: hidden;
@@ -194,7 +195,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    gap: 24px;
     background-color: var(--Freshflow-white);
     padding: 32px 32px 32px;
     border-radius: 48px;
@@ -288,7 +290,9 @@
     position: relative;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    flex: 1 1 40%;
+    min-width: 0;
     gap: 35px;
 }
 
@@ -308,6 +312,8 @@
 .pricing-one__price-box {
     position: relative;
     display: block;
+    min-width: 0;
+    max-width: 320px;
 }
 
 .pricing-one__price-pack {
@@ -374,6 +380,7 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
+    max-width: 220px;
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
 }
@@ -386,14 +393,19 @@
     position: relative;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 60px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex: 1 1 60%;
+    min-width: 0;
+    gap: 28px;
 }
 
 .pricing-one__points {
     position: relative;
     display: block;
-    width: 275px;
+    width: auto;
+    flex: 1 1 auto;
+    min-width: 0;
 }
 
 .pricing-one__points:before {
@@ -415,8 +427,8 @@
 .pricing-one__points li {
     position: relative;
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-wrap: nowrap;
     gap: 15px;
 }
 
@@ -446,6 +458,7 @@
 .pricing-one__points li .text {
     position: relative;
     display: block;
+    min-width: 0;
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
 }
@@ -461,6 +474,7 @@
 .pricing-one__btn-box {
     position: relative;
     display: block;
+    flex-shrink: 0;
 }
 
 .pricing-one__btn-box:before {
@@ -522,6 +536,20 @@
     height: 200%;
     transform: scaleX(1.0);
     transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 2s;
+}
+
+@media only screen and (max-width: 767px) {
+    .pricing-one__tab-buttons-box {
+        max-width: calc(100% - 16px);
+    }
+
+    .pricing-one__discount-box {
+        right: 0;
+    }
+
+    .pricing-one__discount-shape-1 {
+        right: 62px;
+    }
 }
 
 /*--------------------------------------------------------------

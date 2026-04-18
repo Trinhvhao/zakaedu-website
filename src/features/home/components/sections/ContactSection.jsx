@@ -100,7 +100,7 @@ export default function ContactSection() {
                   <div className="contact-one__img-main">
                     <img
                       alt=""
-                      src="/legacy/assets/images/resources/contact-one-img-main.jpg"
+                      src="/legacy/assets/images/resources/contact-one-img-main.png"
                     />
                   </div>
                   <div
@@ -111,7 +111,7 @@ export default function ContactSection() {
                   >
                     <img
                       alt=""
-                      src="/legacy/assets/images/resources/contact-one-small-img-1.jpg"
+                      src="/legacy/assets/images/resources/contact-one-small-img-1.png"
                     />
                   </div>
                   <div
@@ -122,7 +122,7 @@ export default function ContactSection() {
                   >
                     <img
                       alt=""
-                      src="/legacy/assets/images/resources/contact-one-small-img-2.jpg"
+                      src="/legacy/assets/images/resources/contact-one-small-img-2.png"
                     />
                   </div>
                 </div>

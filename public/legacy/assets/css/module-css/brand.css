@@ -27,14 +27,22 @@
 
 .brand-one__list li {
     position: relative;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     float: left;
+    flex: 0 0 auto;
+    height: 92px;
+    padding: 8px 40px;
 }
 
 .brand-one__list li img {
+    display: block;
     width: auto;
-    margin-right: 40px;
-    margin-left: 40px;
+    max-width: 280px;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center;
 }
 
 .brand-one__list-two {

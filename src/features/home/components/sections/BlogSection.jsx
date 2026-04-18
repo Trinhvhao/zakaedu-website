@@ -51,7 +51,7 @@ export default function BlogSection() {
               <div className="blog-one__single">
                 <div className="blog-one__img-box">
                   <div className="blog-one__img">
-                    <img alt="" src="/legacy/assets/images/blog/blog-1-1.jpg" />
+                    <img alt="" src="/legacy/assets/images/blog/blog-1-1.png" />
                   </div>
                   <div className="blog-one__date">
                     <p>
@@ -111,7 +111,7 @@ export default function BlogSection() {
                 </div>
                 <div className="blog-one__img-box">
                   <div className="blog-one__img">
-                    <img alt="" src="/legacy/assets/images/blog/blog-1-2.jpg" />
+                    <img alt="" src="/legacy/assets/images/blog/blog-1-2.png" />
                   </div>
                   <div className="blog-one__date">
                     <p>
@@ -147,7 +147,7 @@ export default function BlogSection() {
               <div className="blog-one__single">
                 <div className="blog-one__img-box">
                   <div className="blog-one__img">
-                    <img alt="" src="/legacy/assets/images/blog/blog-1-3.jpg" />
+                    <img alt="" src="/legacy/assets/images/blog/blog-1-3.png" />
                   </div>
                   <div className="blog-one__date">
                     <p>
@@ -207,7 +207,7 @@ export default function BlogSection() {
                 </div>
                 <div className="blog-one__img-box">
                   <div className="blog-one__img">
-                    <img alt="" src="/legacy/assets/images/blog/blog-1-4.jpg" />
+                    <img alt="" src="/legacy/assets/images/blog/blog-1-4.png" />
                   </div>
                   <div className="blog-one__date">
                     <p>

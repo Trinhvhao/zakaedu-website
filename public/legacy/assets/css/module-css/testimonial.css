@@ -65,6 +65,7 @@
     display: block;
     float: left;
     padding: 0 12px;
+    flex: 0 0 auto;
 }
 
 .testimonial-one__single {
@@ -74,6 +75,10 @@
     border-radius: 32px;
     padding: 23px 30px 23px;
     z-index: 1;
+    min-width: 280px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
 }
 
 .testimonial-one__client-info {
@@ -113,12 +118,15 @@
 .testimonial-one__client-img {
     position: relative;
     display: block;
-    max-width: 80px;
-    width: 100%;
+    width: 80px;
+    height: 80px;
+    flex: 0 0 80px;
 }
 
 .testimonial-one__client-img img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     border: 2px solid #F1F1F2;
     border-radius: 16px;
 }
@@ -135,6 +143,8 @@
     font-family: var(--Freshflow-font-two);
     margin-top: 8px;
     margin-bottom: 14px;
+    min-height: 90px;
+    flex-grow: 1;
 }
 
 .testimonial-one__rating-and-date {

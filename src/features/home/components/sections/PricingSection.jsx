@@ -13,7 +13,7 @@ const PRICING_PLANS = {
         'Giáo viên phản hồi hằng tuần',
         'Phiếu luyện tập tại nhà',
       ],
-      image: '/legacy/assets/images/resources/pricing-one-1-1.jpg',
+      image: '/legacy/assets/images/resources/pricing-one-1-1.png',
     },
     {
       name: 'Tiến bộ',
@@ -26,7 +26,7 @@ const PRICING_PLANS = {
         'Cột mốc đánh giá tiến bộ',
         'Cập nhật kết quả cho phụ huynh',
       ],
-      image: '/legacy/assets/images/resources/pricing-one-1-2.jpg',
+      image: '/legacy/assets/images/resources/pricing-one-1-2.png',
       recommended: true,
     },
     {
@@ -40,7 +40,7 @@ const PRICING_PLANS = {
         'Buổi hướng dẫn 1 kèm 1',
         'Báo cáo chi tiết theo tháng',
       ],
-      image: '/legacy/assets/images/resources/pricing-one-1-3.jpg',
+      image: '/legacy/assets/images/resources/pricing-one-1-3.png',
     },
   ],
   monthly: [
@@ -55,7 +55,7 @@ const PRICING_PLANS = {
         'Học qua trò chơi trên lớp',
         'Kết nối giáo viên và phụ huynh',
       ],
-      image: '/legacy/assets/images/resources/pricing-one-1-1.jpg',
+      image: '/legacy/assets/images/resources/pricing-one-1-1.png',
     },
     {
       name: 'Tiến bộ',
@@ -68,7 +68,7 @@ const PRICING_PLANS = {
         'Nhiệm vụ học theo dự án',
         'Đánh giá tiến bộ mỗi tháng',
       ],
-      image: '/legacy/assets/images/resources/pricing-one-1-2.jpg',
+      image: '/legacy/assets/images/resources/pricing-one-1-2.png',
       recommended: true,
     },
     {
@@ -82,7 +82,7 @@ const PRICING_PLANS = {
         'Cố vấn luyện nói chuyên sâu',
         'Báo cáo phân tích kết quả học tập',
       ],
-      image: '/legacy/assets/images/resources/pricing-one-1-3.jpg',
+      image: '/legacy/assets/images/resources/pricing-one-1-3.png',
     },
   ],
   yearly: [
@@ -97,7 +97,7 @@ const PRICING_PLANS = {
         'Sự kiện giao tiếp theo mùa',
         'Tư vấn đồng hành cho phụ huynh',
       ],
-      image: '/legacy/assets/images/resources/pricing-one-1-1.jpg',
+      image: '/legacy/assets/images/resources/pricing-one-1-1.png',
     },
     {
       name: 'Tiến bộ',
@@ -110,7 +110,7 @@ const PRICING_PLANS = {
         'Tham gia CLB giao tiếp',
         'Hỗ trợ ưu tiên từ cố vấn',
       ],
-      image: '/legacy/assets/images/resources/pricing-one-1-2.jpg',
+      image: '/legacy/assets/images/resources/pricing-one-1-2.png',
       recommended: true,
     },
     {
@@ -124,7 +124,7 @@ const PRICING_PLANS = {
         'Luyện thi nâng cao chuyên sâu',
         'Hồ sơ tiến bộ đầy đủ cả năm',
       ],
-      image: '/legacy/assets/images/resources/pricing-one-1-3.jpg',
+      image: '/legacy/assets/images/resources/pricing-one-1-3.png',
     },
   ],
 }
@@ -225,14 +225,14 @@ export default function PricingSection() {
                       </div>
                       <div className="pricing-one__tab-content-left">
                         <div className="pricing-one__img">
-                          <img alt={plan.name} src={plan.image} />
+                          <img alt={plan.name} src={plan.image} style={{ width: '100%', height: '180px', objectFit: 'cover', borderRadius: '40px' }} />
                         </div>
                         <div className="pricing-one__price-box">
                           <p className="pricing-one__price-pack">{plan.name}</p>
-                          <h2 className="pricing-one__price">
-                            <span className="dolar">$</span>
-                            {plan.price}
-                            <span className="clean-count">{plan.duration}</span>
+                          <h2 className="pricing-one__price" style={{ fontSize: '28px', whiteSpace: 'nowrap' }}>
+                            {plan.name === 'Khởi đầu' && '4-6 tuổi'}
+                            {plan.name === 'Tiến bộ' && '7-10 tuổi'}
+                            {plan.name === 'Bứt phá' && 'Thi Cambridge'}
                           </h2>
                           <p className="pricing-one__text">{plan.summary}</p>
                         </div>
@@ -253,7 +253,7 @@ export default function PricingSection() {
                         <div className="pricing-one__btn-box">
                           <a href="/contact">
                             <span className="icon-plus-1" />
-                            Chọn gói học
+                            Tìm hiểu thêm
                           </a>
                         </div>
                       </div>

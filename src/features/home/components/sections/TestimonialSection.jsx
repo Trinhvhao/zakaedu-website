@@ -2,67 +2,91 @@ import ReactMarqueeList from '../shared/ReactMarqueeList'
 
 const TOP_TESTIMONIALS = [
   {
-    name: 'Emily Carter',
-    role: 'Phụ huynh học viên',
+    name: 'Nguyễn Thu Hương',
+    role: 'Phụ huynh bé lớp 2',
     title: 'Rất đáng để đầu tư!',
     quoteLines: [
       'Con tôi từng ngại nói tiếng Anh,',
       'nhưng sau vài tháng học tại trung tâm',
       'bé đã tự tin giao tiếp hơn rất nhiều!',
     ],
-    image: '/legacy/assets/images/testimonial/testimonial-1-1.jpg',
+    image: 'https://images.pexels.com/photos/10264338/pexels-photo-10264338.jpeg',
   },
   {
-    name: 'Michael Brown',
-    role: 'Phụ huynh lớp 4',
+    name: 'Trần Hoài Nam',
+    role: 'Phụ huynh bé lớp 4',
     title: 'Chuyên nghiệp và tận tâm!',
     quoteLines: [
       'Giáo viên theo sát từng buổi học,',
       'bài giảng dễ hiểu và rất sinh động,',
       'con tôi học vui và tiến bộ rõ ràng.',
     ],
-    image: '/legacy/assets/images/testimonial/testimonial-1-2.jpg',
+    image: 'https://images.pexels.com/photos/27023191/pexels-photo-27023191.jpeg',
   },
   {
-    name: 'Sarah Thompson',
-    role: 'Phụ huynh lớp 3',
+    name: 'Lê Thị Mai',
+    role: 'Phụ huynh bé lớp 3',
     title: 'Tiến bộ rõ sau từng buổi!',
     quoteLines: [
       'Mỗi tuần con đều có bài tập ứng dụng,',
       'phát âm chuẩn hơn và nói tự nhiên hơn,',
       'gia đình tôi rất hài lòng với kết quả.',
     ],
-    image: '/legacy/assets/images/testimonial/testimonial-1-3.jpg',
+    image: 'https://images.pexels.com/photos/33193923/pexels-photo-33193923.jpeg?auto=compress&cs=tinysrgb&w=160&h=160&fit=crop',
   },
   {
-    name: 'John Peterson',
-    role: 'Phụ huynh lớp 5',
+    name: 'Phạm Quang Huy',
+    role: 'Phụ huynh bé lớp 5',
     title: 'Cực kỳ yên tâm khi gửi con!',
     quoteLines: [
       'Lịch học linh hoạt nên gia đình dễ sắp xếp,',
       'giáo viên nhiệt tình và quan tâm sát sao,',
       'con tôi tự tin hơn sau từng chủ đề học.',
     ],
-    image: '/legacy/assets/images/testimonial/testimonial-1-4.jpg',
+    image: 'https://media.istockphoto.com/id/692732494/vi/anh/ch%C3%A2n-dung-doanh-nh%C3%A2n-tr%E1%BA%BB-ch%C3%A2u-%C3%A1-h%E1%BA%A1nh-ph%C3%BAc-trong-qu%C3%A1n-c%C3%A0-ph%C3%AA.jpg?b=1&s=612x612&w=0&k=20&c=qmB6KgHinAKEOqZlbVj6kY_AGdLz6AXtwWAB7Ly9aNo=',
+  },
+  {
+    name: 'Vũ Lan Anh',
+    role: 'Phụ huynh bé lớp 2',
+    title: 'Lựa chọn tuyệt vời cho con!',
+    quoteLines: [
+      'Ban đầu con e ngại, nhưng giáo viên rất tốt bụng,',
+      'tạo môi trường vui vẻ để bé mạnh dạn học hỏi,',
+      'bây giờ con thích đi học tiếng Anh lắm.',
+    ],
+    image: 'https://images.pexels.com/photos/33193912/pexels-photo-33193912.jpeg?auto=compress&cs=tinysrgb&w=160&h=160&fit=crop',
+  },
+  {
+    name: 'Đặng Minh Khoa',
+    role: 'Phụ huynh bé lớp 3',
+    title: 'Chất lượng đích thực, giá trị xứng đáng!',
+    quoteLines: [
+      'Không chỉ học tiếng Anh mà còn được rèn kỹ năng',
+      'giao tiếp, tư duy logic, con tôi phát triển toàn diện,',
+      'lên lớp 4 con học tốt hơn so với bạn bè rất nhiều.',
+    ],
+    image: 'https://media.istockphoto.com/id/1790810318/vi/anh/ch%C3%A2n-dung-nam-doanh-nh%C3%A2n-ch%C3%A2u-%C3%A1-t%E1%BA%A1o-d%C3%A1ng-tr%C3%AAn-n%E1%BB%81n-tr%E1%BA%AFng.jpg?b=1&s=612x612&w=0&k=20&c=xQ__Bto4GYGPF210cKPMFlFPsY1bnSuXgVnagHNf1wA=',
   },
 ]
 
 const BOTTOM_TESTIMONIALS = [
   {
     ...TOP_TESTIMONIALS[2],
-    image: '/legacy/assets/images/testimonial/testimonial-1-5.jpg',
   },
   {
     ...TOP_TESTIMONIALS[0],
-    image: '/legacy/assets/images/testimonial/testimonial-1-6.jpg',
   },
   {
     ...TOP_TESTIMONIALS[1],
-    image: '/legacy/assets/images/testimonial/testimonial-1-7.jpg',
   },
   {
     ...TOP_TESTIMONIALS[3],
-    image: '/legacy/assets/images/testimonial/testimonial-1-8.jpg',
+  },
+  {
+    ...TOP_TESTIMONIALS[4],
+  },
+  {
+    ...TOP_TESTIMONIALS[5],
   },
 ]
 

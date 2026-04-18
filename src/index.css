@@ -1275,9 +1275,11 @@ em {
   grid-template-columns: none;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  scroll-padding-inline: 30px;
   scroll-behavior: smooth;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  padding-inline: 26px;
   padding-bottom: 6px;
 }
 
@@ -1325,6 +1327,31 @@ em {
   background: #ffffff;
   box-shadow: 0 0 0 1px rgba(8, 25, 35, 0.12);
   transform: translateX(-50%);
+}
+
+.react-compare-handle {
+  position: absolute;
+  top: 50%;
+  left: var(--compare-position);
+  transform: translate(-50%, -50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 2px solid rgba(14, 38, 55, 0.12);
+  box-shadow: 0 8px 22px rgba(8, 25, 35, 0.2);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.react-compare-handle-icon {
+  color: #223746;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .react-compare-range {
@@ -1628,10 +1655,6 @@ em {
   --marquee-gap: 28px;
 }
 
-.legacy-home-page .testimonial-one .react-marquee:hover .react-marquee__track {
-  animation-play-state: running;
-}
-
 .legacy-video-modal {
   position: fixed;
   inset: 0;
@@ -1759,7 +1782,7 @@ body.legacy-video-modal-open {
   }
 
   .team-slider-react__track.team-grid-react {
-    scroll-snap-type: x proximity;
+    padding-inline: 30px;
   }
 
   .legacy-page-header-inner {

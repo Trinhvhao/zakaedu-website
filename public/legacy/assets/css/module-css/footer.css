@@ -89,7 +89,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 10px;
 }
 
 .site-footer__contact-info-icon {
@@ -117,7 +117,7 @@
     line-height: 14px;
     color: rgba(var(--Freshflow-white-rgb), .60);
     font-family: var(--Freshflow-font-two);
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 }
 
 .site-footer__contact-info-content h5 {
