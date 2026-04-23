@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import LegacyHomeMarkup from '../features/home/components/LegacyHomeMarkup'
 import { useHomeRevealAnimations } from '../features/home/legacy/useHomeRevealAnimations'
 import { useHomeTitleReveal } from '../features/home/legacy/useHomeTitleReveal'
@@ -11,6 +12,19 @@ export default function HomePage() {
   useHomeTitleReveal(assetsReady)
   useLegacyHomeUiControls(assetsReady)
   useLegacyHomeRouteMap(assetsReady)
+
+  useEffect(() => {
+    // Preload critical banner image
+    const link = document.createElement('link')
+    link.rel = 'preload'
+    link.as = 'image'
+    link.href = '/legacy/assets/images/resources/banner-one-img-1.png'
+    document.head.appendChild(link)
+
+    return () => {
+      document.head.removeChild(link)
+    }
+  }, [])
 
   return (
     <main
