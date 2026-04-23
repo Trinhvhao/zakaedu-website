@@ -15,7 +15,7 @@ export default function LegacyPageHeader({ title, breadcrumb }) {
           <p className="legacy-page-header-kicker">Freshflow Cleaning</p>
           <h1>{title}</h1>
           <div className="legacy-breadcrumb">
-            <Link to="/home">Home</Link>
+            <Link to="/">Home</Link>
             <span>/</span>
             <p>{breadcrumb}</p>
           </div>

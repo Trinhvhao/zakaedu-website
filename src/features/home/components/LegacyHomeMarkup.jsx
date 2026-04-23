@@ -12,6 +12,7 @@ import BlogSection from './sections/BlogSection'
 import BrandSection from './sections/BrandSection'
 import ContactSection from './sections/ContactSection'
 import CounterSection from './sections/CounterSection'
+import GallerySection from './sections/GallerySection'
 import NewsletterSection from './sections/NewsletterSection'
 import OfficeLocationSection from './sections/OfficeLocationSection'
 import PricingSection from './sections/PricingSection'
@@ -49,6 +50,7 @@ export default function LegacyHomeMarkup() {
         <BrandSection />
         <OfficeLocationSection />
         <PricingSection />
+        <GallerySection />
         <BlogSection />
         <NewsletterSection />
         <HomeFooter />

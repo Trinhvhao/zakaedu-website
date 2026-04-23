@@ -76,7 +76,7 @@ export default function HomeHeader() {
             <div className="main-menu__wrapper-inner">
               <div className="main-menu__left">
                 <div className="main-menu__logo">
-                  <a href="/home">
+                  <a href="/">
                     <img alt="" src="/legacy/assets/images/resources/logo-1.svg" />
                   </a>
                 </div>
@@ -100,12 +100,12 @@ export default function HomeHeader() {
                                     <div className="home-showcase__image">
                                       <img alt="" src="/legacy/assets/images/home-showcase/home-showcase-1-1.jpg" />
                                       <div className="home-showcase__buttons">
-                                        <a className="thm-btn home-showcase__buttons__item" href="/home">
+                                        <a className="thm-btn home-showcase__buttons__item" href="/">
                                           Multi Page
                                           <span className="icon-diagonal-arrow">
                                           </span>
                                         </a>
-                                        <a className="thm-btn home-showcase__buttons__item" href="/home">
+                                        <a className="thm-btn home-showcase__buttons__item" href="/">
                                           One Page
                                           <span className="icon-diagonal-arrow">
                                           </span>
@@ -129,12 +129,12 @@ export default function HomeHeader() {
                                     <div className="home-showcase__image">
                                       <img alt="" src="/legacy/assets/images/home-showcase/home-showcase-1-2.jpg" />
                                       <div className="home-showcase__buttons">
-                                        <a className="thm-btn home-showcase__buttons__item" href="/home">
+                                        <a className="thm-btn home-showcase__buttons__item" href="/">
                                           Multi Page
                                           <span className="icon-diagonal-arrow">
                                           </span>
                                         </a>
-                                        <a className="thm-btn home-showcase__buttons__item" href="/home">
+                                        <a className="thm-btn home-showcase__buttons__item" href="/">
                                           One Page
                                           <span className="icon-diagonal-arrow">
                                           </span>
@@ -158,12 +158,12 @@ export default function HomeHeader() {
                                     <div className="home-showcase__image">
                                       <img alt="" src="/legacy/assets/images/home-showcase/home-showcase-1-3.jpg" />
                                       <div className="home-showcase__buttons">
-                                        <a className="thm-btn home-showcase__buttons__item" href="/home">
+                                        <a className="thm-btn home-showcase__buttons__item" href="/">
                                           Multi Page
                                           <span className="icon-diagonal-arrow">
                                           </span>
                                         </a>
-                                        <a className="thm-btn home-showcase__buttons__item" href="/home">
+                                        <a className="thm-btn home-showcase__buttons__item" href="/">
                                           View Page
                                           <span className="icon-diagonal-arrow">
                                           </span>
@@ -187,7 +187,7 @@ export default function HomeHeader() {
                                     <div className="home-showcase__image">
                                       <img alt="" src="/legacy/assets/images/home-showcase/home-showcase-1-4.jpg" />
                                       <div className="home-showcase__buttons">
-                                        <a className="thm-btn home-showcase__buttons__item" href="/home">
+                                        <a className="thm-btn home-showcase__buttons__item" href="/">
                                           View
                                           <span className="icon-diagonal-arrow">
                                           </span>
@@ -259,7 +259,7 @@ export default function HomeHeader() {
             <div className="main-menu__wrapper-inner">
               <div className="main-menu__left">
                 <div className="main-menu__logo">
-                  <a href="/home">
+                  <a href="/">
                     <img alt="ZakaEdu logo" src="/legacy/assets/images/resources/logo-1.svg" />
                   </a>
                 </div>

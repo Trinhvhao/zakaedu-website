@@ -37,6 +37,7 @@ export const LEGACY_STYLES = [
   '/legacy/assets/css/module-css/about.css',
   '/legacy/assets/css/module-css/contact.css',
   '/legacy/assets/css/module-css/blog.css',
+  '/legacy/assets/css/module-css/gallery.css',
   '/legacy/assets/css/style.css',
   '/legacy/assets/css/responsive.css',
 ]
@@ -47,9 +48,9 @@ export const LEGACY_SCRIPTS = [
 ]
 
 export const LEGACY_ROUTE_MAP = {
-  '/legacy/pages/index/index.html': '/home',
-  '/legacy/pages/index-one-page/index.html': '/home',
-  '/legacy/pages/index-dark/index.html': '/home',
+  '/legacy/pages/index/index.html': '/',
+  '/legacy/pages/index-one-page/index.html': '/',
+  '/legacy/pages/index-dark/index.html': '/',
   '/legacy/pages/about/index.html': '/about',
   '/legacy/pages/faq/index.html': '/contact',
   '/legacy/pages/services/index.html': '/services',

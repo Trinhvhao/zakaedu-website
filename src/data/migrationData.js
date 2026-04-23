@@ -6,7 +6,7 @@ export const migrationStats = {
 }
 
 export const routeRollout = [
-  { title: 'Home', path: '/home', status: 'migrated' },
+  { title: 'Home', path: '/', status: 'migrated' },
   { title: 'About', path: '/about', status: 'migrated' },
   { title: 'Services', path: '/services', status: 'migrated' },
   { title: 'Contact', path: '/contact', status: 'migrated' },

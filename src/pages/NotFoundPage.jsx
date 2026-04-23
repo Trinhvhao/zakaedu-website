@@ -9,7 +9,7 @@ export default function NotFoundPage() {
         This path does not exist in React right now. Use Home and continue migration
         by phase.
       </p>
-      <Link to="/home">Go to Home</Link>
+      <Link to="/">Go to Home</Link>
     </main>
   )
 }

@@ -20,7 +20,7 @@ function upsertMeta(name, content, isProperty = false) {
 }
 
 function getMeta(pathname) {
-  if (pathname === '/home') {
+  if (pathname === '/') {
     return {
       title: 'Home | Zakaedu Website',
       description: 'Migration dashboard and phased rollout status for the React website.',

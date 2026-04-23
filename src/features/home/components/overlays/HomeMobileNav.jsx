@@ -11,7 +11,7 @@ export default function HomeMobileNav() {
             </i>
           </span>
           <div className="logo-box">
-            <a aria-label="logo image" href="/home">
+            <a aria-label="logo image" href="/">
               <img alt="ZakaEdu logo" src="/legacy/assets/images/resources/logo-2.png" width={150} />
             </a>
           </div>

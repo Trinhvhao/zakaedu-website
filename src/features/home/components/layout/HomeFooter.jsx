@@ -15,7 +15,7 @@ export default function HomeFooter() {
                 <div className="site-footer__top-left">
                   <div className="site-footer__logo-box">
                     <div className="site-footer__logo">
-                      <a href="/home">
+                      <a href="/">
                         <img alt="" src="/legacy/assets/images/resources/logo-1.svg" />
                       </a>
                     </div>
@@ -126,7 +126,7 @@ export default function HomeFooter() {
                           <h4 className="footer-widget__title">Truy cập nhanh</h4>
                           <ul className="footer-widget__quick-links-list list-unstyled">
                             <li>
-                              <a href="/home">
+                              <a href="/">
                                 <span className="icon-next"></span>{' '}
                                 Trang chủ
                               </a>

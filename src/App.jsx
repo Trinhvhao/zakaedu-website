@@ -22,8 +22,7 @@ function App() {
     <BrowserRouter>
       <SeoManager />
       <Routes>
-        <Route path="/" element={<Navigate to="/home" replace />} />
-        <Route path="/home" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
         <Route element={<AppLayout />}>
           <Route path="/about" element={<AboutPage />} />
           <Route path="/services" element={<ServicesPage />} />

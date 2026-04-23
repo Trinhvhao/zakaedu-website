@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 
 const navItems = [
-  { to: '/home', label: 'Home' },
+  { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
   { to: '/services', label: 'Services' },
   { to: '/portfolio', label: 'Portfolio' },
@@ -18,7 +18,7 @@ export default function SiteHeader() {
   return (
     <header className="site-header">
       <div className="shell site-header-inner">
-        <NavLink to="/home" className="brand-mark">
+        <NavLink to="/" className="brand-mark">
           Freshflow
         </NavLink>
         <nav>
