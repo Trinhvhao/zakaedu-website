@@ -1,30 +1,35 @@
 import { useEffect, useState } from 'react'
 
-export default function HomePreloader() {
+export default function HomePreloader({ assetsReady }) {
   const [visible, setVisible] = useState(true)
+  const [windowLoaded, setWindowLoaded] = useState(false)
 
   useEffect(() => {
-    let timeoutId = 0
-
-    const hide = () => {
-      timeoutId = window.setTimeout(() => {
-        setVisible(false)
-      }, 220)
+    const handleLoad = () => {
+      setWindowLoaded(true)
     }
 
     if (document.readyState === 'complete') {
-      hide()
+      setWindowLoaded(true)
     } else {
-      window.addEventListener('load', hide, { once: true })
+      window.addEventListener('load', handleLoad, { once: true })
     }
 
     return () => {
-      window.removeEventListener('load', hide)
-      if (timeoutId) {
-        window.clearTimeout(timeoutId)
-      }
+      window.removeEventListener('load', handleLoad)
     }
   }, [])
+
+  useEffect(() => {
+    // Chỉ ẩn preloader khi cả window và assets đều ready
+    if (windowLoaded && assetsReady) {
+      const timeoutId = window.setTimeout(() => {
+        setVisible(false)
+      }, 300)
+
+      return () => window.clearTimeout(timeoutId)
+    }
+  }, [windowLoaded, assetsReady])
 
   if (!visible) return null
 

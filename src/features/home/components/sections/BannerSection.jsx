@@ -1,18 +1,7 @@
-import { useState, useEffect } from 'react'
 import ReactTypedText from '../shared/ReactTypedText'
 import ReactCountUp from '../shared/ReactCountUp'
-import './BannerSection.css'
 
 export default function BannerSection() {
-  const [imageLoaded, setImageLoaded] = useState(false)
-
-  useEffect(() => {
-    // Preload main banner image
-    const img = new Image()
-    img.src = '/legacy/assets/images/resources/banner-one-img-1.png'
-    img.onload = () => setImageLoaded(true)
-  }, [])
-
   return (
     <>
     <section className="banner-one" id="home">
@@ -70,17 +59,17 @@ export default function BannerSection() {
                 <ul className="list-unstyled banner-one__satisfied-partner-list">
                   <li>
                     <div className="banner-one__satisfied-partner-img">
-                      <img alt="" src="/legacy/assets/images/resources/banner-one-satisfied-partner-1-1.png" loading="lazy" />
+                      <img alt="" src="/legacy/assets/images/resources/banner-one-satisfied-partner-1-1.png" />
                     </div>
                   </li>
                   <li>
                     <div className="banner-one__satisfied-partner-img">
-                      <img alt="" src="/legacy/assets/images/resources/banner-one-satisfied-partner-1-2.png" loading="lazy" />
+                      <img alt="" src="/legacy/assets/images/resources/banner-one-satisfied-partner-1-2.png" />
                     </div>
                   </li>
                   <li>
                     <div className="banner-one__satisfied-partner-img">
-                      <img alt="" src="/legacy/assets/images/resources/banner-one-satisfied-partner-1-3.png" loading="lazy" />
+                      <img alt="" src="/legacy/assets/images/resources/banner-one-satisfied-partner-1-3.png" />
                     </div>
                   </li>
                 </ul>
@@ -104,26 +93,16 @@ export default function BannerSection() {
             <div className="banner-one__right">
               <div className="banner-one__img-box">
                 <div
-                  className={`banner-one__img slideInRight ${imageLoaded ? 'loaded' : 'loading'}`}
+                  className="banner-one__img slideInRight"
                   data-reveal="true"
                   data-reveal-delay="100ms"
                   data-reveal-duration="2500ms"
-                  style={{ 
-                    minHeight: imageLoaded ? 'auto' : '500px',
-                    background: imageLoaded ? 'transparent' : 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)'
-                  }}
                 >
-                  {imageLoaded && (
-                    <img 
-                      alt="Banner" 
-                      src="/legacy/assets/images/resources/banner-one-img-1.png"
-                      style={{ display: 'block', width: '100%', height: 'auto' }}
-                    />
-                  )}
+                  <img alt="" src="/legacy/assets/images/resources/banner-one-img-1.png" />
                 </div>
                 <div className="banner-one__google-rating">
                   <div className="banner-one__google-rating-img">
-                    <img alt="" src="/legacy/assets/images/resources/banner-one-google-rating-img.png" loading="lazy" />
+                    <img alt="" src="/legacy/assets/images/resources/banner-one-google-rating-img.png" />
                   </div>
                   <div className="banner-one__google-rating-box">
                     <div className="banner-one__google-rating-star">

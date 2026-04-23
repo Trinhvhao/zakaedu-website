@@ -9,23 +9,30 @@ export function useLegacyHomeAssets() {
     const injectedScripts = []
     let cancelled = false
     let pendingStyles = 0
+    let pendingImages = 0
 
     setAssetsReady(false)
     document.documentElement.classList.add('legacy-home-loading')
 
     const markReady = () => {
       if (cancelled) return
-      setAssetsReady(true)
-      document.documentElement.classList.remove('legacy-home-loading')
+      if (pendingStyles <= 0 && pendingImages <= 0) {
+        setAssetsReady(true)
+        document.documentElement.classList.remove('legacy-home-loading')
+      }
     }
 
     const markStyleComplete = () => {
       pendingStyles -= 1
-      if (pendingStyles <= 0) {
-        markReady()
-      }
+      markReady()
     }
 
+    const markImageComplete = () => {
+      pendingImages -= 1
+      markReady()
+    }
+
+    // Load stylesheets
     LEGACY_LINKS.forEach((item) => {
       const link = document.createElement('link')
       link.rel = item.rel
@@ -55,11 +62,29 @@ export function useLegacyHomeAssets() {
       injectedLinks.push(link)
     })
 
-    const styleFallbackTimer = window.setTimeout(() => {
-      markReady()
-    }, 5000)
+    // Preload critical images
+    const criticalImages = [
+      '/legacy/assets/images/resources/banner-one-img-1.png',
+      '/legacy/assets/images/backgrounds/slider-1-1.jpg',
+    ]
 
-    if (pendingStyles === 0) {
+    criticalImages.forEach((src) => {
+      pendingImages += 1
+      const img = new Image()
+      img.onload = markImageComplete
+      img.onerror = markImageComplete
+      img.src = src
+    })
+
+    // Fallback timer
+    const styleFallbackTimer = window.setTimeout(() => {
+      if (!cancelled) {
+        setAssetsReady(true)
+        document.documentElement.classList.remove('legacy-home-loading')
+      }
+    }, 8000)
+
+    if (pendingStyles === 0 && pendingImages === 0) {
       markReady()
     }
 

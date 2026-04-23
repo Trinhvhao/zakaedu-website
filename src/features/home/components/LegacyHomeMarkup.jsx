@@ -59,7 +59,6 @@ export default function LegacyHomeMarkup() {
       <HomeMobileNav />
       <HomeSearchPopup />
       <HomeScrollTop />
-      <HomePreloader />
       <VideoModal videoUrl={activeVideoUrl} onClose={() => setActiveVideoUrl('')} />
     </>
   )

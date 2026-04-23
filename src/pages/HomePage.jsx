@@ -1,5 +1,5 @@
-import { useEffect } from 'react'
 import LegacyHomeMarkup from '../features/home/components/LegacyHomeMarkup'
+import HomePreloader from '../features/home/components/overlays/HomePreloader'
 import { useHomeRevealAnimations } from '../features/home/legacy/useHomeRevealAnimations'
 import { useHomeTitleReveal } from '../features/home/legacy/useHomeTitleReveal'
 import { useLegacyHomeAssets } from '../features/home/legacy/useLegacyHomeAssets'
@@ -13,25 +13,15 @@ export default function HomePage() {
   useLegacyHomeUiControls(assetsReady)
   useLegacyHomeRouteMap(assetsReady)
 
-  useEffect(() => {
-    // Preload critical banner image
-    const link = document.createElement('link')
-    link.rel = 'preload'
-    link.as = 'image'
-    link.href = '/legacy/assets/images/resources/banner-one-img-1.png'
-    document.head.appendChild(link)
-
-    return () => {
-      document.head.removeChild(link)
-    }
-  }, [])
-
   return (
-    <main
-      className={`legacy-home-main legacy-home-page${assetsReady ? '' : ' legacy-home-main--loading'}`}
-      aria-busy={!assetsReady}
-    >
-      {assetsReady ? <LegacyHomeMarkup /> : null}
-    </main>
+    <>
+      <HomePreloader assetsReady={assetsReady} />
+      <main
+        className={`legacy-home-main legacy-home-page${assetsReady ? '' : ' legacy-home-main--loading'}`}
+        aria-busy={!assetsReady}
+      >
+        {assetsReady ? <LegacyHomeMarkup /> : null}
+      </main>
+    </>
   )
 }
